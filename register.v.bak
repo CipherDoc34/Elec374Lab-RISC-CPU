@@ -1,0 +1,16 @@
+module register(
+	input clear, clock, MDREnable, [31:0]MDMuxOut,
+	output [31:0]MDMuxIn,
+);
+	reg [31:0]q;
+	
+	always @ (posedge clock)
+		begin 
+			if (clear) begin
+				q <= 32'b0;
+			end
+			else if (MDREnable) begin
+				q <= MDMuxOut;
+			end
+	assign MDMuxIn = q;
+endmodule

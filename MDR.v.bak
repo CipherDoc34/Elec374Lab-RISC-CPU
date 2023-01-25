@@ -1,0 +1,4 @@
+module MDR(
+	input clear, clock, MDRIn, [31:0]BusMuxOut, [31:0]MDatain, Read,
+	output [31:0]BusMuxInMDR,
+);
