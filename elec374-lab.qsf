@@ -53,3 +53,4 @@ set_global_assignment -name VERILOG_FILE register.v
 set_global_assignment -name VERILOG_FILE DataPath.v
 set_global_assignment -name VERILOG_FILE MDR.v
 set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE Bus.v
