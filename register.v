@@ -1,10 +1,11 @@
 module register(
-	input clear, clock, REnable, [31:0]BusMuxOut,
-	output [31:0]BusMuxIn,
+	input clear, clock, REnable, 
+	input [31:0]BusMuxOut,
+	output wire [31:0]BusMuxIn
 );
 	reg [31:0]q;
 	
-	always @ (posedge clock)
+always @ (posedge clock)
 		begin 
 			if (clear) begin
 				q <= 32'b0;
@@ -12,5 +13,6 @@ module register(
 			else if (REnable) begin
 				q <= BusMuxOut;
 			end
-	assign BusMuxIn = q;
+		end
+	assign BusMuxIn = q;	
 endmodule

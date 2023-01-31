@@ -1,0 +1,382 @@
+Analysis & Elaboration report for elec374-lab
+Tue Jan 31 00:07:00 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "Bus:bus"
+  6. Port Connectivity Checks: "ALU:alu"
+  7. Port Connectivity Checks: "register:IR"
+  8. Analysis & Elaboration Messages
+  9. Analysis & Elaboration Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                       ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Elaboration Status      ; Successful - Tue Jan 31 00:07:00 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; elec374-lab                                     ;
+; Top-level Entity Name              ; DataPath                                        ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
++------------------------------------+-------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; DataPath           ; elec374-lab        ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Bus:bus"                                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; S0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; S1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; S2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; S3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; S4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu"                                                                              ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ZMuxIn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:IR"                                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; BusMuxIn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Elaboration
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jan 31 00:06:59 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off elec374-lab -c elec374-lab --analysis_and_elaboration
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file register.v
+    Info (12023): Found entity 1: register
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: DataPath
+Info (12021): Found 1 design units, including 1 entities, in source file mdr.v
+    Info (12023): Found entity 1: MDR
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file bus.v
+    Info (12023): Found entity 1: Bus
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb.v
+    Info (12023): Found entity 1: datapath_tb
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(48): created implicit net for "clear"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(48): created implicit net for "R0in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(52): created implicit net for "R4in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(53): created implicit net for "R5in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(54): created implicit net for "R6in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(55): created implicit net for "R7in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(56): created implicit net for "R8in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(57): created implicit net for "R9in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(58): created implicit net for "R10in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(59): created implicit net for "R11in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(60): created implicit net for "R12in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(61): created implicit net for "R13in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(62): created implicit net for "R14in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(63): created implicit net for "R15in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(66): created implicit net for "HIin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(67): created implicit net for "LOin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(68): created implicit net for "ZHIin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(69): created implicit net for "ZLOin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(76): created implicit net for "InPortIn"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(77): created implicit net for "CSignIn"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R0out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R1out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R4out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R5out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R6out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R7out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R8out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R9out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R10out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R11out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R12out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R13out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R14out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R15out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "HIout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "LOout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "ZHIout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "PortInout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "CSignout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S0"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S1"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S2"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S3"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S4"
+Info (12127): Elaborating entity "DataPath" for the top level hierarchy
+Info (12128): Elaborating entity "register" for hierarchy "register:R0"
+Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MDR"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu"
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(13): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(14): variable "BusMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(56): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(61): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(24): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(12): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "C[0]" at ALU.v(12)
+Info (10041): Inferred latch for "C[1]" at ALU.v(12)
+Info (10041): Inferred latch for "C[2]" at ALU.v(12)
+Info (10041): Inferred latch for "C[3]" at ALU.v(12)
+Info (10041): Inferred latch for "C[4]" at ALU.v(12)
+Info (10041): Inferred latch for "C[5]" at ALU.v(12)
+Info (10041): Inferred latch for "C[6]" at ALU.v(12)
+Info (10041): Inferred latch for "C[7]" at ALU.v(12)
+Info (10041): Inferred latch for "C[8]" at ALU.v(12)
+Info (10041): Inferred latch for "C[9]" at ALU.v(12)
+Info (10041): Inferred latch for "C[10]" at ALU.v(12)
+Info (10041): Inferred latch for "C[11]" at ALU.v(12)
+Info (10041): Inferred latch for "C[12]" at ALU.v(12)
+Info (10041): Inferred latch for "C[13]" at ALU.v(12)
+Info (10041): Inferred latch for "C[14]" at ALU.v(12)
+Info (10041): Inferred latch for "C[15]" at ALU.v(12)
+Info (10041): Inferred latch for "C[16]" at ALU.v(12)
+Info (10041): Inferred latch for "C[17]" at ALU.v(12)
+Info (10041): Inferred latch for "C[18]" at ALU.v(12)
+Info (10041): Inferred latch for "C[19]" at ALU.v(12)
+Info (10041): Inferred latch for "C[20]" at ALU.v(12)
+Info (10041): Inferred latch for "C[21]" at ALU.v(12)
+Info (10041): Inferred latch for "C[22]" at ALU.v(12)
+Info (10041): Inferred latch for "C[23]" at ALU.v(12)
+Info (10041): Inferred latch for "C[24]" at ALU.v(12)
+Info (10041): Inferred latch for "C[25]" at ALU.v(12)
+Info (10041): Inferred latch for "C[26]" at ALU.v(12)
+Info (10041): Inferred latch for "C[27]" at ALU.v(12)
+Info (10041): Inferred latch for "C[28]" at ALU.v(12)
+Info (10041): Inferred latch for "C[29]" at ALU.v(12)
+Info (10041): Inferred latch for "C[30]" at ALU.v(12)
+Info (10041): Inferred latch for "C[31]" at ALU.v(12)
+Info (10041): Inferred latch for "C[32]" at ALU.v(12)
+Info (10041): Inferred latch for "C[33]" at ALU.v(12)
+Info (10041): Inferred latch for "C[34]" at ALU.v(12)
+Info (10041): Inferred latch for "C[35]" at ALU.v(12)
+Info (10041): Inferred latch for "C[36]" at ALU.v(12)
+Info (10041): Inferred latch for "C[37]" at ALU.v(12)
+Info (10041): Inferred latch for "C[38]" at ALU.v(12)
+Info (10041): Inferred latch for "C[39]" at ALU.v(12)
+Info (10041): Inferred latch for "C[40]" at ALU.v(12)
+Info (10041): Inferred latch for "C[41]" at ALU.v(12)
+Info (10041): Inferred latch for "C[42]" at ALU.v(12)
+Info (10041): Inferred latch for "C[43]" at ALU.v(12)
+Info (10041): Inferred latch for "C[44]" at ALU.v(12)
+Info (10041): Inferred latch for "C[45]" at ALU.v(12)
+Info (10041): Inferred latch for "C[46]" at ALU.v(12)
+Info (10041): Inferred latch for "C[47]" at ALU.v(12)
+Info (10041): Inferred latch for "C[48]" at ALU.v(12)
+Info (10041): Inferred latch for "C[49]" at ALU.v(12)
+Info (10041): Inferred latch for "C[50]" at ALU.v(12)
+Info (10041): Inferred latch for "C[51]" at ALU.v(12)
+Info (10041): Inferred latch for "C[52]" at ALU.v(12)
+Info (10041): Inferred latch for "C[53]" at ALU.v(12)
+Info (10041): Inferred latch for "C[54]" at ALU.v(12)
+Info (10041): Inferred latch for "C[55]" at ALU.v(12)
+Info (10041): Inferred latch for "C[56]" at ALU.v(12)
+Info (10041): Inferred latch for "C[57]" at ALU.v(12)
+Info (10041): Inferred latch for "C[58]" at ALU.v(12)
+Info (10041): Inferred latch for "C[59]" at ALU.v(12)
+Info (10041): Inferred latch for "C[60]" at ALU.v(12)
+Info (10041): Inferred latch for "C[61]" at ALU.v(12)
+Info (10041): Inferred latch for "C[62]" at ALU.v(12)
+Info (10041): Inferred latch for "C[63]" at ALU.v(12)
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus"
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(24): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct
+Warning (10034): Output port "S0" at Bus.v(11) has no driver
+Warning (10034): Output port "S1" at Bus.v(11) has no driver
+Warning (10034): Output port "S2" at Bus.v(11) has no driver
+Warning (10034): Output port "S3" at Bus.v(11) has no driver
+Warning (10034): Output port "S4" at Bus.v(11) has no driver
+Info (10041): Inferred latch for "q[0]" at Bus.v(93)
+Info (10041): Inferred latch for "q[1]" at Bus.v(93)
+Info (10041): Inferred latch for "q[2]" at Bus.v(93)
+Info (10041): Inferred latch for "q[3]" at Bus.v(93)
+Info (10041): Inferred latch for "q[4]" at Bus.v(93)
+Info (10041): Inferred latch for "q[5]" at Bus.v(93)
+Info (10041): Inferred latch for "q[6]" at Bus.v(93)
+Info (10041): Inferred latch for "q[7]" at Bus.v(93)
+Info (10041): Inferred latch for "q[8]" at Bus.v(93)
+Info (10041): Inferred latch for "q[9]" at Bus.v(93)
+Info (10041): Inferred latch for "q[10]" at Bus.v(93)
+Info (10041): Inferred latch for "q[11]" at Bus.v(93)
+Info (10041): Inferred latch for "q[12]" at Bus.v(93)
+Info (10041): Inferred latch for "q[13]" at Bus.v(93)
+Info (10041): Inferred latch for "q[14]" at Bus.v(93)
+Info (10041): Inferred latch for "q[15]" at Bus.v(93)
+Info (10041): Inferred latch for "q[16]" at Bus.v(93)
+Info (10041): Inferred latch for "q[17]" at Bus.v(93)
+Info (10041): Inferred latch for "q[18]" at Bus.v(93)
+Info (10041): Inferred latch for "q[19]" at Bus.v(93)
+Info (10041): Inferred latch for "q[20]" at Bus.v(93)
+Info (10041): Inferred latch for "q[21]" at Bus.v(93)
+Info (10041): Inferred latch for "q[22]" at Bus.v(93)
+Info (10041): Inferred latch for "q[23]" at Bus.v(93)
+Info (10041): Inferred latch for "q[24]" at Bus.v(93)
+Info (10041): Inferred latch for "q[25]" at Bus.v(93)
+Info (10041): Inferred latch for "q[26]" at Bus.v(93)
+Info (10041): Inferred latch for "q[27]" at Bus.v(93)
+Info (10041): Inferred latch for "q[28]" at Bus.v(93)
+Info (10041): Inferred latch for "q[29]" at Bus.v(93)
+Info (10041): Inferred latch for "q[30]" at Bus.v(93)
+Info (10041): Inferred latch for "q[31]" at Bus.v(93)
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clear" is missing source, defaulting to GND
+Info (144001): Generated suppressed messages file C:/altera/13.0sp1/elec374-Lab/output_files/elec374-lab.map.smsg
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 59 warnings
+    Info: Peak virtual memory: 4565 megabytes
+    Info: Processing ended: Tue Jan 31 00:07:00 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/altera/13.0sp1/elec374-Lab/output_files/elec374-lab.map.smsg.
+
+

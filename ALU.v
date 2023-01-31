@@ -1,5 +1,7 @@
 module ALU(
-	input [31:0]YMuxOut, [31:0]BusMuxOut, [4:0]ALUControl,
+	input [31:0]YMuxOut, 
+	input [31:0]BusMuxOut, 
+	input [4:0]ALUControl,
 	output [63:0]ZMuxIn
 );
 reg [31:0]A;
@@ -21,62 +23,62 @@ always @ (ALUControl) begin
 	
 	case(ALUControl)
 		
-		5b'00011 : begin //add
+		5'b00011 : begin//add
 			C = A + B;
 		end
 		
-		5b'00100 : begin //sub
+		5'b00100 : begin //sub
 			C = A - B;
 		end
 		
-		5b'00101 : begin //and
+		5'b00101 : begin //and
 			C = A & B;
 		end
 		
-		5b'00110 : begin //or
+		5'b00110 : begin //or
 			C = A | B;
 		end
 		
-		5b'00111 : begin //shr
+		5'b00111 : begin //shr
 			C = A >> 1;
 		end
 		
-		5b'01000 : begin //shra
+		5'b01000 : begin //shra
 			C = A >>> 1;
 		end
 		
-		5b'01001 : begin //shl
+		5'b01001 : begin //shl
 			C = A << 1;
 		end
 		
-		5b'01010 : begin //ror
+		5'b01010 : begin //ror
 			C = A >> 1;
-			C[31] = YMuxOut[0]
+			C[31] = YMuxOut[0];
 		end
 		
-		5b'01011 : begin //rol
+		5'b01011 : begin //rol
 			C = A << 1;
-			C[0] = YMuxOut[31]
+			C[0] = YMuxOut[31];
 		end
 		
-		5b'01111 : begin //mul
+		5'b01111 : begin //mul
 			C = A * B;
 		end
 		
-		5b'10000 : begin //div
+		5'b10000 : begin //div
 			C = A / B;
 		end
 		
-		5b'10001 : begin //negate
+		5'b10001 : begin //negate
 			C = ~A;
 			C = C + 1;
 		end
 		
-		5b'10010 : begin //not
+		5'b10010 : begin //not
 			C = ~A;
 		end
 		
 	endcase
-	
+	end	
 	assign ZMuxIn = C;
 endmodule

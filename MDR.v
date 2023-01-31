@@ -1,25 +1,27 @@
 module MDR(
-	input clear, clock, MDRIn, [31:0]BusMuxOut, [31:0]MDatain, Read,
-	output [31:0]BusMuxInMDR,
+	input clear, clock, MDRIn, 
+	input [31:0]BusMuxOut, 
+	input [31:0]MDatain,
+	input Read,
+	output wire [31:0]BusMuxInMDR
 );
 
-reg [31:0]D;
+//wire [31:0]D;
 reg [31:0]Q;
 
 always @ (posedge clock)
 	begin
-		if (Read) begin
-			D <= MDatain;
+		if (MDRIn) begin
+			if (Read) begin
+				Q <= MDatain;
+			end 
+			else begin
+				Q <= BusMuxOut;
+			end
 		end
-		else begin
-			D <= BusMuxOut;
-		end
-		if (clear) begin
+		else if  (clear) begin
 			Q <= 32'b0;
 		end
-		else if  (MDRIn) begin
-			Q <= D;
-		end
 	end
-	assign BusMuxInMDR = Q;
+assign BusMuxInMDR = Q;
 endmodule

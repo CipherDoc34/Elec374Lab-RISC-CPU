@@ -1,14 +1,18 @@
 module DataPath(
 //control signals
-	input [31:0]Mdatain,
+	/*input [31:0]Mdatain,
 	input R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, 
 	input R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
 	input HIout, LOout, ZHIout, ZLOout, PCout, MDRout, PortInout, CSignout,
 	input Read, incPc, IRin, PCin, MDRin, Yin, MARin,
 	input [4:0] aluControl,
 	input clock, clear,
-	input R2in, R4in, R5in
+	input R2in, R4in, R5in*/
 	
+	input PCout, ZLOout, MDRout, R2out, R3out, MARin, Zin, PCin, MDRin, IRin, Yin, IncPC, Read, R1in, R2in, R3in, clock, 
+	input [31:0] Mdatain,
+	input [4:0] aluControl,
+	output wire [31:0]out
 );
 
 wire [31:0] BusMuxOut; 
@@ -31,10 +35,13 @@ wire [31:0] BusMuxInR15;
 wire [31:0] BusMuxInZHI;
 wire [31:0] BusMuxInZLO;
 wire [31:0] BusMuxInPC;
+wire [31:0] BusMuxInIR;
 wire [31:0] BusMuxInMDR;
 wire [31:0] BusMuxInPortIn;
 wire [31:0] BusMuxInCSign;
 wire [31:0] BusMuxInY;
+wire [31:0] BusMuxInHI;
+wire [31:0] BusMuxInLO;
 wire [63:0] ALUIn;
 
 //General Purpose Registers
@@ -61,6 +68,7 @@ register LO(clear, clock, LOin, BusMuxOut, BusMuxInLO);
 register ZHI(clear, clock, ZHIin, BusMuxOut, BusMuxInZHI);
 register ZLO(clear, clock, ZLOin, BusMuxOut, BusMuxInZLO);
 register PC(clear, clock, PCin, BusMuxOut, BusMuxInPC);
+register IR(clear, clock, IRin, BusMuxOut, BusMuxInIR);
 register Y(clear, clock, Yin, BusMuxOut, BusMuxInY);
 
 //Devices
@@ -73,10 +81,9 @@ ALU alu(BusMuxInY, BusMuxOut, aluControl, ALUIn);
 Bus bus(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7,
 	BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15,
 	BusMuxInHI, BusMuxInLO, BusMuxInZHI, BusMuxInZLO, BusMuxInPC, BusMuxInMDR, BusMuxInPortIn, BusMuxInCSign,
-	BusMuxOut,
 	R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, 
 	R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
 	HIout, LOout, ZHIout, ZLOout, PCout, MDRout, PortInout, CSignout,
-	S0, S1, S2, S3, S4);
-	
+	S0, S1, S2, S3, S4, BusMuxOut);
+assign out = Mdatain;
 endmodule
