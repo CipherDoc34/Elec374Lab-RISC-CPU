@@ -3,7 +3,7 @@ input signed [31:0] X, Y,
 output wire [63:0] result
 );
 
-	reg [2:0] cc[(15:0];
+	reg [2:0] cc[15:0];
 	reg [32:0] pp[15:0];
 	reg [63:0] spp[(32 / 2)-1:0];
 	reg [63:0] product;

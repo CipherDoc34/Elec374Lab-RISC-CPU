@@ -11,7 +11,9 @@ reg [63:0]C;
 wire [63:0]boothOutput;
 BoothAlgorithm mul(A, B, boothOutput);
 wire [31:0]lookaheadOut;
+//integer i;
 lookaheadadder addSub(A,B,ALUControl[2],lookaheadOut);
+
 always @ (ALUin) begin
 	A = YMuxOut;
 	B = BusMuxOut;

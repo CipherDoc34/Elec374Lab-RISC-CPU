@@ -1,15 +1,27 @@
-# Reading C:/Users/harsh/Quartus/modelsim_ase/tcl/vsim/pref.tcl 
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
 # do elec374-lab_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Copying C:\Users\harsh\Quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied C:\Users\harsh\Quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/BoothsAlgorithm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BoothAlgorithm
+# 
+# Top level modules:
+# 	BoothAlgorithm
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/BCell.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BCell
+# 
+# Top level modules:
+# 	BCell
 # vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ThirtyTwoBitAdder
@@ -40,31 +52,31 @@
 # 
 # Top level modules:
 # 	register
-# vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/DataPath.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/DataPath.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module DataPath
 # 
 # Top level modules:
 # 	DataPath
-# vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/MDR.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/MDR.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module MDR
 # 
 # Top level modules:
 # 	MDR
-# vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/ALU.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ALU.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/Bus.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/Bus.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Bus
 # 
 # Top level modules:
 # 	Bus
-# vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/ZMux.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ZMux.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ZMux
 # 
@@ -76,14 +88,8 @@
 # 
 # Top level modules:
 # 	lookaheadadder
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/bcell.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module BCell
 # 
-# Top level modules:
-# 	BCell
-# 
-# vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/datapath_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/datapath_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module datapath_tb
 # 
@@ -97,6 +103,7 @@
 # Loading work.register
 # Loading work.MDR
 # Loading work.ALU
+# Loading work.BoothAlgorithm
 # Loading work.lookaheadadder
 # Loading work.ThirtyTwoBitAdder
 # Loading work.SixteenBitAdder
@@ -178,14 +185,13 @@
 # 
 #           File in use by: Keshav  Hostname: SHITBOX420  ProcessID: 3212
 # 
-#           Attempting to use alternate WLF file "./wlftqs851h".
+#           Attempting to use alternate WLF file "./wlftdaagfz".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftqs851h
+#           Using alternate file: ./wlftdaagfz
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 500 ns
-run 20 ns
+# run 600 ns

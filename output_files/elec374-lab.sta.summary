@@ -2,4 +2,112 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'aluControl[0]'
+Slack : -106.712
+TNS   : -1792.453
+
+Type  : Slow 1200mV 85C Model Setup 'MDRout'
+Slack : -7.973
+TNS   : -199.928
+
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -4.704
+TNS   : -740.944
+
+Type  : Slow 1200mV 85C Model Hold 'MDRout'
+Slack : -2.236
+TNS   : -33.957
+
+Type  : Slow 1200mV 85C Model Hold 'aluControl[0]'
+Slack : -0.643
+TNS   : -1.922
+
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 3.143
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -195.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MDRout'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'aluControl[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Setup 'aluControl[0]'
+Slack : -95.035
+TNS   : -1596.269
+
+Type  : Slow 1200mV 0C Model Setup 'MDRout'
+Slack : -7.121
+TNS   : -177.768
+
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -4.135
+TNS   : -645.878
+
+Type  : Slow 1200mV 0C Model Hold 'MDRout'
+Slack : -1.955
+TNS   : -29.082
+
+Type  : Slow 1200mV 0C Model Hold 'aluControl[0]'
+Slack : -0.507
+TNS   : -1.284
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 2.827
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -195.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MDRout'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'aluControl[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Setup 'aluControl[0]'
+Slack : -60.384
+TNS   : -1002.485
+
+Type  : Fast 1200mV 0C Model Setup 'MDRout'
+Slack : -4.061
+TNS   : -99.883
+
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -2.911
+TNS   : -459.162
+
+Type  : Fast 1200mV 0C Model Hold 'MDRout'
+Slack : -1.395
+TNS   : -26.191
+
+Type  : Fast 1200mV 0C Model Hold 'aluControl[0]'
+Slack : -0.473
+TNS   : -4.002
+
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 2.380
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -208.134
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MDRout'
+Slack : -3.000
+TNS   : -11.444
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'aluControl[0]'
+Slack : -3.000
+TNS   : -3.600
+
 ------------------------------------------------------------
