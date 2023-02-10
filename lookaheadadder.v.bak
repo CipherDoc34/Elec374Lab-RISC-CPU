@@ -1,0 +1,18 @@
+module lookaheadadder(
+	input wire [31:0]x,
+	input wire [31:0]y,
+	output wire [31:0]s
+);
+reg g,p;
+reg c;
+initial c = 1'b0;
+adder adder_inst
+(
+	.c0(c) ,	// input  c0_sig
+	.X(x[31:0]) ,	// input [31:0] X_sig
+	.Y(y[31:0]) ,	// input [31:0] Y_sig
+	.Gpp(g) ,	// output  Gpp_sig
+	.Ppp(p) ,	// output  Ppp_sig
+	.S(s[31:0]) 	// output [31:0] S_sig
+);
+endmodule

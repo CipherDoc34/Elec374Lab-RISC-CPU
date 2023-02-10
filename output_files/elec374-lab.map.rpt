@@ -1,5 +1,5 @@
 Analysis & Elaboration report for elec374-lab
-Tue Jan 31 22:02:09 2023
+Fri Feb 10 00:38:44 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -11,9 +11,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
   5. Port Connectivity Checks: "Bus:bus"
-  6. Port Connectivity Checks: "register:IR"
-  7. Analysis & Elaboration Messages
-  8. Analysis & Elaboration Suppressed Messages
+  6. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|carrylookaheadlogic:b2v_inst4"
+  7. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|carrylookaheadlogic:b2v_inst4"
+  8. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|FourBitAdder:b2v_inst|carrylookaheadlogic:b2v_inst6"
+  9. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst"
+ 10. Port Connectivity Checks: "register:IR"
+ 11. Analysis & Elaboration Messages
+ 12. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -39,7 +43,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Tue Jan 31 22:02:09 2023           ;
+; Analysis & Elaboration Status      ; Successful - Fri Feb 10 00:38:44 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; elec374-lab                                     ;
 ; Top-level Entity Name              ; DataPath                                        ;
@@ -167,6 +171,49 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|carrylookaheadlogic:b2v_inst4"                                        ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; P2   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; G2   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; P3   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; G3   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; c2   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; c3   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; c4   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|carrylookaheadlogic:b2v_inst4" ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                        ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; c4   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                       ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|FourBitAdder:b2v_inst|carrylookaheadlogic:b2v_inst6" ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                              ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; c4   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                             ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst"             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Gpp  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Ppp  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "register:IR"                                                                            ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -182,9 +229,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 31 22:02:08 2023
+    Info: Processing started: Fri Feb 10 00:38:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off elec374-lab -c elec374-lab --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file thirtytwobitadder.v
+    Info (12023): Found entity 1: ThirtyTwoBitAdder
+Info (12021): Found 1 design units, including 1 entities, in source file sixteenbitadder.v
+    Info (12023): Found entity 1: SixteenBitAdder
+Info (12021): Found 1 design units, including 1 entities, in source file fourbitadder.v
+    Info (12023): Found entity 1: FourBitAdder
+Info (12021): Found 1 design units, including 1 entities, in source file carrylookaheadlogic.v
+    Info (12023): Found entity 1: carrylookaheadlogic
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
     Info (12023): Found entity 1: register
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
@@ -199,8 +254,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file datapat
     Info (12023): Found entity 1: datapath_tb
 Info (12021): Found 1 design units, including 1 entities, in source file zmux.v
     Info (12023): Found entity 1: ZMux
-Info (12021): Found 1 design units, including 1 entities, in source file b-cell.bdf
-    Info (12023): Found entity 1: B-Cell
+Info (12021): Found 1 design units, including 1 entities, in source file lookaheadadder.v
+    Info (12023): Found entity 1: lookaheadadder
 Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(49): created implicit net for "clear"
 Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(49): created implicit net for "R0in"
 Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(53): created implicit net for "R4in"
@@ -245,81 +300,95 @@ Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created imp
 Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S2"
 Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S3"
 Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S4"
+Warning (10236): Verilog HDL Implicit Net warning at lookaheadadder.v(20): created implicit net for "g"
+Warning (10236): Verilog HDL Implicit Net warning at lookaheadadder.v(21): created implicit net for "p"
 Info (12127): Elaborating entity "DataPath" for the top level hierarchy
 Info (12128): Elaborating entity "register" for hierarchy "register:R0"
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MDR"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu"
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(14): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(15): variable "BusMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(25): variable "ALUControl" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(57): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(62): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(25): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(13): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "C[0]" at ALU.v(13)
-Info (10041): Inferred latch for "C[1]" at ALU.v(13)
-Info (10041): Inferred latch for "C[2]" at ALU.v(13)
-Info (10041): Inferred latch for "C[3]" at ALU.v(13)
-Info (10041): Inferred latch for "C[4]" at ALU.v(13)
-Info (10041): Inferred latch for "C[5]" at ALU.v(13)
-Info (10041): Inferred latch for "C[6]" at ALU.v(13)
-Info (10041): Inferred latch for "C[7]" at ALU.v(13)
-Info (10041): Inferred latch for "C[8]" at ALU.v(13)
-Info (10041): Inferred latch for "C[9]" at ALU.v(13)
-Info (10041): Inferred latch for "C[10]" at ALU.v(13)
-Info (10041): Inferred latch for "C[11]" at ALU.v(13)
-Info (10041): Inferred latch for "C[12]" at ALU.v(13)
-Info (10041): Inferred latch for "C[13]" at ALU.v(13)
-Info (10041): Inferred latch for "C[14]" at ALU.v(13)
-Info (10041): Inferred latch for "C[15]" at ALU.v(13)
-Info (10041): Inferred latch for "C[16]" at ALU.v(13)
-Info (10041): Inferred latch for "C[17]" at ALU.v(13)
-Info (10041): Inferred latch for "C[18]" at ALU.v(13)
-Info (10041): Inferred latch for "C[19]" at ALU.v(13)
-Info (10041): Inferred latch for "C[20]" at ALU.v(13)
-Info (10041): Inferred latch for "C[21]" at ALU.v(13)
-Info (10041): Inferred latch for "C[22]" at ALU.v(13)
-Info (10041): Inferred latch for "C[23]" at ALU.v(13)
-Info (10041): Inferred latch for "C[24]" at ALU.v(13)
-Info (10041): Inferred latch for "C[25]" at ALU.v(13)
-Info (10041): Inferred latch for "C[26]" at ALU.v(13)
-Info (10041): Inferred latch for "C[27]" at ALU.v(13)
-Info (10041): Inferred latch for "C[28]" at ALU.v(13)
-Info (10041): Inferred latch for "C[29]" at ALU.v(13)
-Info (10041): Inferred latch for "C[30]" at ALU.v(13)
-Info (10041): Inferred latch for "C[31]" at ALU.v(13)
-Info (10041): Inferred latch for "C[32]" at ALU.v(13)
-Info (10041): Inferred latch for "C[33]" at ALU.v(13)
-Info (10041): Inferred latch for "C[34]" at ALU.v(13)
-Info (10041): Inferred latch for "C[35]" at ALU.v(13)
-Info (10041): Inferred latch for "C[36]" at ALU.v(13)
-Info (10041): Inferred latch for "C[37]" at ALU.v(13)
-Info (10041): Inferred latch for "C[38]" at ALU.v(13)
-Info (10041): Inferred latch for "C[39]" at ALU.v(13)
-Info (10041): Inferred latch for "C[40]" at ALU.v(13)
-Info (10041): Inferred latch for "C[41]" at ALU.v(13)
-Info (10041): Inferred latch for "C[42]" at ALU.v(13)
-Info (10041): Inferred latch for "C[43]" at ALU.v(13)
-Info (10041): Inferred latch for "C[44]" at ALU.v(13)
-Info (10041): Inferred latch for "C[45]" at ALU.v(13)
-Info (10041): Inferred latch for "C[46]" at ALU.v(13)
-Info (10041): Inferred latch for "C[47]" at ALU.v(13)
-Info (10041): Inferred latch for "C[48]" at ALU.v(13)
-Info (10041): Inferred latch for "C[49]" at ALU.v(13)
-Info (10041): Inferred latch for "C[50]" at ALU.v(13)
-Info (10041): Inferred latch for "C[51]" at ALU.v(13)
-Info (10041): Inferred latch for "C[52]" at ALU.v(13)
-Info (10041): Inferred latch for "C[53]" at ALU.v(13)
-Info (10041): Inferred latch for "C[54]" at ALU.v(13)
-Info (10041): Inferred latch for "C[55]" at ALU.v(13)
-Info (10041): Inferred latch for "C[56]" at ALU.v(13)
-Info (10041): Inferred latch for "C[57]" at ALU.v(13)
-Info (10041): Inferred latch for "C[58]" at ALU.v(13)
-Info (10041): Inferred latch for "C[59]" at ALU.v(13)
-Info (10041): Inferred latch for "C[60]" at ALU.v(13)
-Info (10041): Inferred latch for "C[61]" at ALU.v(13)
-Info (10041): Inferred latch for "C[62]" at ALU.v(13)
-Info (10041): Inferred latch for "C[63]" at ALU.v(13)
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(16): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(17): variable "BusMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(27): variable "ALUControl" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(30): variable "lookaheadOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(34): variable "lookaheadOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(59): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(64): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(27): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(15): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "C[0]" at ALU.v(15)
+Info (10041): Inferred latch for "C[1]" at ALU.v(15)
+Info (10041): Inferred latch for "C[2]" at ALU.v(15)
+Info (10041): Inferred latch for "C[3]" at ALU.v(15)
+Info (10041): Inferred latch for "C[4]" at ALU.v(15)
+Info (10041): Inferred latch for "C[5]" at ALU.v(15)
+Info (10041): Inferred latch for "C[6]" at ALU.v(15)
+Info (10041): Inferred latch for "C[7]" at ALU.v(15)
+Info (10041): Inferred latch for "C[8]" at ALU.v(15)
+Info (10041): Inferred latch for "C[9]" at ALU.v(15)
+Info (10041): Inferred latch for "C[10]" at ALU.v(15)
+Info (10041): Inferred latch for "C[11]" at ALU.v(15)
+Info (10041): Inferred latch for "C[12]" at ALU.v(15)
+Info (10041): Inferred latch for "C[13]" at ALU.v(15)
+Info (10041): Inferred latch for "C[14]" at ALU.v(15)
+Info (10041): Inferred latch for "C[15]" at ALU.v(15)
+Info (10041): Inferred latch for "C[16]" at ALU.v(15)
+Info (10041): Inferred latch for "C[17]" at ALU.v(15)
+Info (10041): Inferred latch for "C[18]" at ALU.v(15)
+Info (10041): Inferred latch for "C[19]" at ALU.v(15)
+Info (10041): Inferred latch for "C[20]" at ALU.v(15)
+Info (10041): Inferred latch for "C[21]" at ALU.v(15)
+Info (10041): Inferred latch for "C[22]" at ALU.v(15)
+Info (10041): Inferred latch for "C[23]" at ALU.v(15)
+Info (10041): Inferred latch for "C[24]" at ALU.v(15)
+Info (10041): Inferred latch for "C[25]" at ALU.v(15)
+Info (10041): Inferred latch for "C[26]" at ALU.v(15)
+Info (10041): Inferred latch for "C[27]" at ALU.v(15)
+Info (10041): Inferred latch for "C[28]" at ALU.v(15)
+Info (10041): Inferred latch for "C[29]" at ALU.v(15)
+Info (10041): Inferred latch for "C[30]" at ALU.v(15)
+Info (10041): Inferred latch for "C[31]" at ALU.v(15)
+Info (10041): Inferred latch for "C[32]" at ALU.v(15)
+Info (10041): Inferred latch for "C[33]" at ALU.v(15)
+Info (10041): Inferred latch for "C[34]" at ALU.v(15)
+Info (10041): Inferred latch for "C[35]" at ALU.v(15)
+Info (10041): Inferred latch for "C[36]" at ALU.v(15)
+Info (10041): Inferred latch for "C[37]" at ALU.v(15)
+Info (10041): Inferred latch for "C[38]" at ALU.v(15)
+Info (10041): Inferred latch for "C[39]" at ALU.v(15)
+Info (10041): Inferred latch for "C[40]" at ALU.v(15)
+Info (10041): Inferred latch for "C[41]" at ALU.v(15)
+Info (10041): Inferred latch for "C[42]" at ALU.v(15)
+Info (10041): Inferred latch for "C[43]" at ALU.v(15)
+Info (10041): Inferred latch for "C[44]" at ALU.v(15)
+Info (10041): Inferred latch for "C[45]" at ALU.v(15)
+Info (10041): Inferred latch for "C[46]" at ALU.v(15)
+Info (10041): Inferred latch for "C[47]" at ALU.v(15)
+Info (10041): Inferred latch for "C[48]" at ALU.v(15)
+Info (10041): Inferred latch for "C[49]" at ALU.v(15)
+Info (10041): Inferred latch for "C[50]" at ALU.v(15)
+Info (10041): Inferred latch for "C[51]" at ALU.v(15)
+Info (10041): Inferred latch for "C[52]" at ALU.v(15)
+Info (10041): Inferred latch for "C[53]" at ALU.v(15)
+Info (10041): Inferred latch for "C[54]" at ALU.v(15)
+Info (10041): Inferred latch for "C[55]" at ALU.v(15)
+Info (10041): Inferred latch for "C[56]" at ALU.v(15)
+Info (10041): Inferred latch for "C[57]" at ALU.v(15)
+Info (10041): Inferred latch for "C[58]" at ALU.v(15)
+Info (10041): Inferred latch for "C[59]" at ALU.v(15)
+Info (10041): Inferred latch for "C[60]" at ALU.v(15)
+Info (10041): Inferred latch for "C[61]" at ALU.v(15)
+Info (10041): Inferred latch for "C[62]" at ALU.v(15)
+Info (10041): Inferred latch for "C[63]" at ALU.v(15)
+Info (12128): Elaborating entity "lookaheadadder" for hierarchy "ALU:alu|lookaheadadder:addSub"
+Info (12128): Elaborating entity "ThirtyTwoBitAdder" for hierarchy "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst"
+Info (12128): Elaborating entity "SixteenBitAdder" for hierarchy "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst"
+Info (12128): Elaborating entity "FourBitAdder" for hierarchy "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|FourBitAdder:b2v_inst"
+Warning (12125): Using design file bcell.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: BCell
+Warning (12300): Found the following files while searching for definition of entity "BCell", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: BCell.bdf
+Info (12128): Elaborating entity "BCell" for hierarchy "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|FourBitAdder:b2v_inst|BCell:b2v_inst"
+Info (12128): Elaborating entity "carrylookaheadlogic" for hierarchy "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|FourBitAdder:b2v_inst|carrylookaheadlogic:b2v_inst6"
 Info (12128): Elaborating entity "ZMux" for hierarchy "ZMux:ZMUX"
 Warning (10235): Verilog HDL Always Construct warning at ZMux.v(10): variable "ZSelect" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at ZMux.v(11): variable "ZMuxIn" is read inside the Always Construct but isn't in the Always Construct's Event Control
@@ -365,11 +434,12 @@ Info (10041): Inferred latch for "q[30]" at Bus.v(96)
 Info (10041): Inferred latch for "q[31]" at Bus.v(96)
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "clear" is missing source, defaulting to GND
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/elec374-Lab/output_files/elec374-lab.map.smsg
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 63 warnings
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 71 warnings
     Info: Peak virtual memory: 4565 megabytes
-    Info: Processing ended: Tue Jan 31 22:02:09 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Feb 10 00:38:44 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

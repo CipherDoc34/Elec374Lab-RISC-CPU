@@ -87,5 +87,5 @@ Bus bus(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, 
 	R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
 	HIout, LOout, ZHIout, ZLOout, ZMuxOut, PCout, MDRout, PortInout, CSignout,
 	S0, S1, S2, S3, S4, BusMuxOut);
-assign out = Mdatain;
+assign out = BusMuxInR1;
 endmodule
