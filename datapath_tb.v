@@ -2,9 +2,10 @@
 `timescale 1ns/10ps
 module datapath_tb;
  reg PCout, ZLOout, MDRout, R2out, R3out; // add any other signals to see in your simulation
- reg MARin, Zin, PCin, MDRin, IRin, Yin;
- reg IncPC, Read, AND, R1in, R2in, R3in;
+ reg MARin, PCin, MDRin, IRin, Yin;
+ reg IncPC, Read, R1in, R2in, R3in;
  reg clock;
+ reg ALUIn, ZMuxEnable, ZSelect, ZMuxOut;
  reg [31:0] Mdatain;
  wire [31:0] out;
  reg [4:0] alucontrol;
@@ -14,7 +15,7 @@ parameter Default = 4'b0000, Reg_load1a = 4'b0001, Reg_load1b = 4'b0010, Reg_loa
 							 T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100;
 reg [3:0] Present_state = Default;
  
-DataPath DUT(PCout, ZLOout, MDRout, R2out, R3out, MARin, Zin, PCin, MDRin, IRin, Yin, IncPC, Read, R1in, R2in, R3in, clock, Mdatain, alucontrol, out);
+DataPath DUT(PCout, ZLOout, MDRout, R2out, R3out, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, R1in, R2in, R3in, clock, ALUIn, ZMuxEnable, ZSelect, ZMuxOut, Mdatain, alucontrol, out);
 
 // add test logic here
 always #10 clock = ~clock;
@@ -45,13 +46,13 @@ always @(Present_state) // do the required job in each state
  case (Present_state) // assert the required signals in each clock cycle
 Default: begin
 PCout <= 0; ZLOout <= 0; MDRout <= 0; // initialize the signals
- R2out <= 0; R3out <= 0; MARin <= 0; Zin <= 0;
+ R2out <= 0; R3out <= 0; MARin <= 0;
  PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0;
- IncPC <= 0; Read <= 0; AND <= 0;
- R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'h00000000;
+ IncPC <= 0; Read <= 0; ALUIn <= 0; ZMuxEnable <= 0; ZSelect <= 0; ZMuxOut <= 0;
+ R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'h00000000; alucontrol <= 32'h00000000;
 end
 Reg_load1a: begin
-Mdatain <= 32'h00000012;
+Mdatain <= 32'h00000041;
 Read = 0; MDRin = 0; // the first zero is there for completeness
 #10 Read <= 1; MDRin <= 1;
 #15 Read <= 0; MDRin <= 0;
@@ -61,7 +62,7 @@ end
  #15 MDRout <= 0; R2in <= 0; // initialize R2 with the value $12
 end
 Reg_load2a: begin
-Mdatain <= 32'h00000014;
+Mdatain <= 32'h00000005;
 #10 Read <= 1; MDRin <= 1;
 #15 Read <= 0; MDRin <= 0;
 end
@@ -79,8 +80,8 @@ end
  #15 MDRout <= 0; R1in <= 0; // initialize R1 with the value $18
 end
 T0: begin // see if you need to de-assert these signals
-#10 PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
-#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0;
+#10 PCout <= 1; MARin <= 1; IncPC <= 1;
+#15 PCout <= 0; MARin <= 0; IncPC <= 0;
 end
 T1: begin
 #10 ZLOout <= 1; PCin <= 1; Read <= 1; MDRin <= 1; Mdatain <= 32'h28918000; // opcode for “and R1, R2, R3”
@@ -91,16 +92,17 @@ T2: begin
 #15 MDRout <= 0; IRin <= 0;
 end
 T3: begin
-#10 R2out <= 1; Yin <= 1;
+#10 R2out <= 1; alucontrol <= 5'b10000; Yin <= 1;
 #15 R2out <= 0; Yin <= 0;
 end
 T4: begin
-#10 R3out <= 1; Zin <= 1;
-#1 alucontrol <= 5'b01111;
-#15 R3out <= 0; Zin <= 0;
+#10 R3out <= 1;
+#1 ALUIn <= 1;
+#15 R3out <= 0; ALUIn = 0;
 end
 T5: begin
-ZLOout <= 1; R1in <= 1;
+ZSelect <= 0; ZMuxEnable <= 1;
+ZMuxOut <= 1; R1in <= 1;
 end
  endcase
  end

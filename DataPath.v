@@ -9,7 +9,7 @@ module DataPath(
 	input clock, clear,
 	input R2in, R4in, R5in*/
 	
-	input PCout, ZLOout, MDRout, R2out, R3out, MARin, Zin, PCin, MDRin, IRin, Yin, IncPC, Read, R1in, R2in, R3in, clock, 
+	input PCout, ZLOout, MDRout, R2out, R3out, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, R1in, R2in, R3in, clock, ALUin, ZMuxEnbale, ZSelect, ZMuxOut,
 	input [31:0] Mdatain,
 	input [4:0] aluControl,
 	output wire [31:0]out
@@ -42,7 +42,8 @@ wire [31:0] BusMuxInCSign;
 wire [31:0] BusMuxInY;
 wire [31:0] BusMuxInHI;
 wire [31:0] BusMuxInLO;
-wire [63:0] ALUIn;
+wire [63:0] ZMuxIn;
+wire [31:0] BusMuxInZMux;
 
 //General Purpose Registers
 register R0(clear, clock, R0in, BusMuxOut, BusMuxInR0);
@@ -75,15 +76,16 @@ register Y(clear, clock, Yin, BusMuxOut, BusMuxInY);
 MDR MDR(clear, clock, MDRin, BusMuxOut, Mdatain, Read, BusMuxInMDR);
 register InPort(clear, clock, InPortIn, BusMuxOut, BusMuxInPortIn);
 register CSign(clear, clock, CSignIn, BusMuxOut, BusMuxInCSign);
-ALU alu(BusMuxInY, BusMuxOut, aluControl, ALUIn);
+ALU alu(BusMuxInY, BusMuxOut, aluControl, ALUin, ZMuxIn);
+ZMux ZMUX(ZMuxIn, ZSelect, ZMuxEnbale, BusMuxInZMux);
 
 //bus
 Bus bus(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7,
 	BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15,
-	BusMuxInHI, BusMuxInLO, BusMuxInZHI, BusMuxInZLO, BusMuxInPC, BusMuxInMDR, BusMuxInPortIn, BusMuxInCSign,
+	BusMuxInHI, BusMuxInLO, BusMuxInZHI, BusMuxInZLO, BusMuxInZMux, BusMuxInPC, BusMuxInMDR, BusMuxInPortIn, BusMuxInCSign,
 	R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, 
 	R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
-	HIout, LOout, ZHIout, ZLOout, PCout, MDRout, PortInout, CSignout,
+	HIout, LOout, ZHIout, ZLOout, ZMuxOut, PCout, MDRout, PortInout, CSignout,
 	S0, S1, S2, S3, S4, BusMuxOut);
 assign out = Mdatain;
 endmodule

@@ -22,6 +22,7 @@ entity \Bus\ is
         BusMuxInLO      : in     vl_logic_vector(31 downto 0);
         BusMuxInZHI     : in     vl_logic_vector(31 downto 0);
         BusMuxInZLO     : in     vl_logic_vector(31 downto 0);
+        BusMuxInZMux    : in     vl_logic_vector(31 downto 0);
         BusMuxInPC      : in     vl_logic_vector(31 downto 0);
         BusMuxInMDR     : in     vl_logic_vector(31 downto 0);
         BusMuxInPortIn  : in     vl_logic_vector(31 downto 0);
@@ -46,6 +47,7 @@ entity \Bus\ is
         LOout           : in     vl_logic;
         ZHIout          : in     vl_logic;
         ZLOout          : in     vl_logic;
+        ZMuxOut         : in     vl_logic;
         PCout           : in     vl_logic;
         MDRout          : in     vl_logic;
         PortInout       : in     vl_logic;

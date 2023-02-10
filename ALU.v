@@ -2,14 +2,15 @@ module ALU(
 	input [31:0]YMuxOut, 
 	input [31:0]BusMuxOut, 
 	input [4:0]ALUControl,
-	output [63:0]ZMuxIn
+	input ALUin,
+	output wire [63:0]ZMuxIn
 );
 reg [31:0]A;
 reg [31:0]B;
 reg [63:0]C;
-integer i;
+//integer i;
 
-always @ (ALUControl) begin
+always @ (ALUin) begin
 	A = YMuxOut;
 	B = BusMuxOut;
 	/*
@@ -80,5 +81,5 @@ always @ (ALUControl) begin
 		
 	endcase
 	end	
-	assign ZMuxIn = C;
+assign ZMuxIn = C;
 endmodule

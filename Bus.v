@@ -2,12 +2,12 @@ module Bus (
 	//Mux
 	input [31:0]BusMuxInR0, input [31:0]BusMuxInR1, input [31:0]BusMuxInR2, input [31:0]BusMuxInR3, input [31:0]BusMuxInR4, input [31:0]BusMuxInR5, input [31:0]BusMuxInR6, input [31:0]BusMuxInR7,
 	input [31:0]BusMuxInR8, input [31:0]BusMuxInR9, input [31:0]BusMuxInR10, input [31:0]BusMuxInR11, input [31:0]BusMuxInR12, input [31:0]BusMuxInR13, input [31:0]BusMuxInR14, input [31:0]BusMuxInR15,
-	input [31:0]BusMuxInHI, input [31:0]BusMuxInLO, input [31:0]BusMuxInZHI, input [31:0]BusMuxInZLO, input [31:0]BusMuxInPC, input [31:0]BusMuxInMDR, input [31:0]BusMuxInPortIn, input [31:0]BusMuxInCSign,
+	input [31:0]BusMuxInHI, input [31:0]BusMuxInLO, input [31:0]BusMuxInZHI, input [31:0]BusMuxInZLO, input [31:0]BusMuxInZMux, input [31:0]BusMuxInPC, input [31:0]BusMuxInMDR, input [31:0]BusMuxInPortIn, input [31:0]BusMuxInCSign,
 	
 	//Encoder
 	input R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, 
 	input R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
-	input HIout, LOout, ZHIout, ZLOout, PCout, MDRout, PortInout, CSignout,
+	input HIout, LOout, ZHIout, ZLOout, ZMuxOut, PCout, MDRout, PortInout, CSignout,
 	output S0, S1, S2, S3, S4,
 	output wire [31:0]BusMuxOut
 );
@@ -80,6 +80,9 @@ always @ (*) begin
 	end
 	if(ZLOout)begin
 		q = BusMuxInZLO;
+	end
+	if(ZMuxOut) begin
+		q = BusMuxInZMux;
 	end
 	if(PCout)begin
 		q = BusMuxInPC;
