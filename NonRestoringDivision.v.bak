@@ -1,0 +1,29 @@
+module NonRestoringDivision(
+input signed [31:0] N, D, 
+output wire [63:0] Q, R
+);
+
+    assign R = N;
+
+     reg [63:0] spp[15:0];
+    reg [63:0] product;
+     wire [32:0] TwosComp;
+     integer k,i;
+
+     assign TwosComp = {~X[31], ~X} + 1;
+
+     always @(N or D or TwosComp)
+    begin
+          for(i=0;i<k;i=i+1)
+                spp[k] = {spp[k],1'b0}; //  shift by one to the left 
+               product = spp [k];
+
+                if(spp[0]=0)
+                 product + TwosComp; // sub
+                end 
+                else if(spp[0] = 1)
+                product + D; // add
+               end
+            end
+     end 
+      endmodule

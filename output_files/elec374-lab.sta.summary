@@ -3,27 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'aluControl[0]'
-Slack : -106.712
-TNS   : -1792.453
-
-Type  : Slow 1200mV 85C Model Setup 'MDRout'
-Slack : -7.973
-TNS   : -199.928
+Slack : -108.168
+TNS   : -2997.230
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -4.704
-TNS   : -740.944
+Slack : -4.560
+TNS   : -756.304
+
+Type  : Slow 1200mV 85C Model Setup 'MDRout'
+Slack : -1.985
+TNS   : -28.145
 
 Type  : Slow 1200mV 85C Model Hold 'MDRout'
-Slack : -2.236
-TNS   : -33.957
+Slack : -2.447
+TNS   : -52.034
 
 Type  : Slow 1200mV 85C Model Hold 'aluControl[0]'
-Slack : -0.643
-TNS   : -1.922
+Slack : 0.402
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 3.143
+Slack : 3.351
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
@@ -39,27 +39,27 @@ Slack : -3.000
 TNS   : -3.000
 
 Type  : Slow 1200mV 0C Model Setup 'aluControl[0]'
-Slack : -95.035
-TNS   : -1596.269
-
-Type  : Slow 1200mV 0C Model Setup 'MDRout'
-Slack : -7.121
-TNS   : -177.768
+Slack : -96.318
+TNS   : -2668.077
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -4.135
-TNS   : -645.878
+Slack : -4.009
+TNS   : -657.009
+
+Type  : Slow 1200mV 0C Model Setup 'MDRout'
+Slack : -1.831
+TNS   : -23.449
 
 Type  : Slow 1200mV 0C Model Hold 'MDRout'
-Slack : -1.955
-TNS   : -29.082
+Slack : -2.173
+TNS   : -45.506
 
 Type  : Slow 1200mV 0C Model Hold 'aluControl[0]'
-Slack : -0.507
-TNS   : -1.284
+Slack : 0.403
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 2.827
+Slack : 2.995
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
@@ -75,39 +75,39 @@ Slack : -3.000
 TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'aluControl[0]'
-Slack : -60.384
-TNS   : -1002.485
-
-Type  : Fast 1200mV 0C Model Setup 'MDRout'
-Slack : -4.061
-TNS   : -99.883
+Slack : -61.394
+TNS   : -1691.720
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -2.911
-TNS   : -459.162
+Slack : -2.856
+TNS   : -472.886
+
+Type  : Fast 1200mV 0C Model Setup 'MDRout'
+Slack : -0.642
+TNS   : -2.794
 
 Type  : Fast 1200mV 0C Model Hold 'MDRout'
-Slack : -1.395
-TNS   : -26.191
+Slack : -1.559
+TNS   : -35.808
 
 Type  : Fast 1200mV 0C Model Hold 'aluControl[0]'
-Slack : -0.473
-TNS   : -4.002
+Slack : 0.137
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 2.380
+Slack : 2.521
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -208.134
+TNS   : -208.747
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MDRout'
 Slack : -3.000
-TNS   : -11.444
+TNS   : -12.427
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'aluControl[0]'
 Slack : -3.000
-TNS   : -3.600
+TNS   : -3.000
 
 ------------------------------------------------------------
