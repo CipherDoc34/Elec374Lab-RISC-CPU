@@ -11,8 +11,10 @@ reg [63:0]C;
 wire [63:0]boothOutput;
 BoothAlgorithm mul(A, B, boothOutput);
 wire [31:0]lookaheadOut;
+wire [31:0] Q, R;
 //integer i;
 lookaheadadder addSub(A,B,ALUControl[2],lookaheadOut);
+NonRestoringDivision div(A, B, Q, R);
 
 always @ (ALUin) begin
 	A = YMuxOut;
@@ -71,7 +73,7 @@ always @ (ALUin) begin
 		end
 		
 		5'b10000 : begin //div
-			C = A / B;
+			C = {R, Q};
 		end
 		
 		5'b10001 : begin //negate
