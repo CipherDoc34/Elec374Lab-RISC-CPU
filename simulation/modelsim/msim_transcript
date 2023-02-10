@@ -40,6 +40,12 @@
 # 
 # Top level modules:
 # 	Bus
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ZMux.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ZMux
+# 
+# Top level modules:
+# 	ZMux
 # 
 # vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/datapath_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -55,11 +61,22 @@
 # Loading work.register
 # Loading work.MDR
 # Loading work.ALU
+# Loading work.ZMux
 # Loading work.Bus
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Keshav  Hostname: SHITBOX420  ProcessID: 3212
+# 
+#           Attempting to use alternate WLF file "./wlftwfi5bd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftwfi5bd
+# 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
+run 30ns

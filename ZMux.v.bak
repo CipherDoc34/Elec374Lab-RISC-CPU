@@ -1,0 +1,18 @@
+module ZMux(
+	input [63:0] ZMuxIn,
+	input ZSelect, //n_low/high
+	input Zenable,
+	output [31:0]ZMuxOut
+);
+
+reg [31:0]Zout;
+always @ (Zenable) begin
+	if (ZSelect) begin
+		Zout = [63:32] ZMuxIn;
+	end
+	else begin
+		Zout = [31:0] ZMuxIn;
+	end
+end
+assign ZMuxOut = Zout;
+endmodule

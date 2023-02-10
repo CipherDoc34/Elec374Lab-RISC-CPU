@@ -1,5 +1,5 @@
 Analysis & Elaboration report for elec374-lab
-Tue Jan 31 00:07:00 2023
+Tue Jan 31 22:02:09 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -11,10 +11,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
   5. Port Connectivity Checks: "Bus:bus"
-  6. Port Connectivity Checks: "ALU:alu"
-  7. Port Connectivity Checks: "register:IR"
-  8. Analysis & Elaboration Messages
-  9. Analysis & Elaboration Suppressed Messages
+  6. Port Connectivity Checks: "register:IR"
+  7. Analysis & Elaboration Messages
+  8. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -40,7 +39,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Tue Jan 31 00:07:00 2023           ;
+; Analysis & Elaboration Status      ; Successful - Tue Jan 31 22:02:09 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; elec374-lab                                     ;
 ; Top-level Entity Name              ; DataPath                                        ;
@@ -168,15 +167,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:alu"                                                                              ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; ZMuxIn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "register:IR"                                                                            ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -192,7 +182,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 31 00:06:59 2023
+    Info: Processing started: Tue Jan 31 22:02:08 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off elec374-lab -c elec374-lab --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
@@ -207,124 +197,133 @@ Info (12021): Found 1 design units, including 1 entities, in source file bus.v
     Info (12023): Found entity 1: Bus
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb.v
     Info (12023): Found entity 1: datapath_tb
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(48): created implicit net for "clear"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(48): created implicit net for "R0in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(52): created implicit net for "R4in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(53): created implicit net for "R5in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(54): created implicit net for "R6in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(55): created implicit net for "R7in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(56): created implicit net for "R8in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(57): created implicit net for "R9in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(58): created implicit net for "R10in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(59): created implicit net for "R11in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(60): created implicit net for "R12in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(61): created implicit net for "R13in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(62): created implicit net for "R14in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(63): created implicit net for "R15in"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(66): created implicit net for "HIin"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(67): created implicit net for "LOin"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(68): created implicit net for "ZHIin"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(69): created implicit net for "ZLOin"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(76): created implicit net for "InPortIn"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(77): created implicit net for "CSignIn"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R0out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R1out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R4out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R5out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R6out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "R7out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R8out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R9out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R10out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R11out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R12out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R13out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R14out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(85): created implicit net for "R15out"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "HIout"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "LOout"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "ZHIout"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "PortInout"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "CSignout"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S0"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S1"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S2"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S3"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "S4"
+Info (12021): Found 1 design units, including 1 entities, in source file zmux.v
+    Info (12023): Found entity 1: ZMux
+Info (12021): Found 1 design units, including 1 entities, in source file b-cell.bdf
+    Info (12023): Found entity 1: B-Cell
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(49): created implicit net for "clear"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(49): created implicit net for "R0in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(53): created implicit net for "R4in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(54): created implicit net for "R5in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(55): created implicit net for "R6in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(56): created implicit net for "R7in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(57): created implicit net for "R8in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(58): created implicit net for "R9in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(59): created implicit net for "R10in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(60): created implicit net for "R11in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(61): created implicit net for "R12in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(62): created implicit net for "R13in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(63): created implicit net for "R14in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(64): created implicit net for "R15in"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(67): created implicit net for "HIin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(68): created implicit net for "LOin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(69): created implicit net for "ZHIin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(70): created implicit net for "ZLOin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(77): created implicit net for "InPortIn"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(78): created implicit net for "CSignIn"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "R0out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "R1out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "R4out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "R5out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "R6out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(86): created implicit net for "R7out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "R8out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "R9out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "R10out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "R11out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "R12out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "R13out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "R14out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "R15out"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(88): created implicit net for "HIout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(88): created implicit net for "LOout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(88): created implicit net for "ZHIout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(88): created implicit net for "PortInout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(88): created implicit net for "CSignout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S0"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S1"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S2"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S3"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S4"
 Info (12127): Elaborating entity "DataPath" for the top level hierarchy
 Info (12128): Elaborating entity "register" for hierarchy "register:R0"
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MDR"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu"
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(13): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(14): variable "BusMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(56): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(61): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(24): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(12): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "C[0]" at ALU.v(12)
-Info (10041): Inferred latch for "C[1]" at ALU.v(12)
-Info (10041): Inferred latch for "C[2]" at ALU.v(12)
-Info (10041): Inferred latch for "C[3]" at ALU.v(12)
-Info (10041): Inferred latch for "C[4]" at ALU.v(12)
-Info (10041): Inferred latch for "C[5]" at ALU.v(12)
-Info (10041): Inferred latch for "C[6]" at ALU.v(12)
-Info (10041): Inferred latch for "C[7]" at ALU.v(12)
-Info (10041): Inferred latch for "C[8]" at ALU.v(12)
-Info (10041): Inferred latch for "C[9]" at ALU.v(12)
-Info (10041): Inferred latch for "C[10]" at ALU.v(12)
-Info (10041): Inferred latch for "C[11]" at ALU.v(12)
-Info (10041): Inferred latch for "C[12]" at ALU.v(12)
-Info (10041): Inferred latch for "C[13]" at ALU.v(12)
-Info (10041): Inferred latch for "C[14]" at ALU.v(12)
-Info (10041): Inferred latch for "C[15]" at ALU.v(12)
-Info (10041): Inferred latch for "C[16]" at ALU.v(12)
-Info (10041): Inferred latch for "C[17]" at ALU.v(12)
-Info (10041): Inferred latch for "C[18]" at ALU.v(12)
-Info (10041): Inferred latch for "C[19]" at ALU.v(12)
-Info (10041): Inferred latch for "C[20]" at ALU.v(12)
-Info (10041): Inferred latch for "C[21]" at ALU.v(12)
-Info (10041): Inferred latch for "C[22]" at ALU.v(12)
-Info (10041): Inferred latch for "C[23]" at ALU.v(12)
-Info (10041): Inferred latch for "C[24]" at ALU.v(12)
-Info (10041): Inferred latch for "C[25]" at ALU.v(12)
-Info (10041): Inferred latch for "C[26]" at ALU.v(12)
-Info (10041): Inferred latch for "C[27]" at ALU.v(12)
-Info (10041): Inferred latch for "C[28]" at ALU.v(12)
-Info (10041): Inferred latch for "C[29]" at ALU.v(12)
-Info (10041): Inferred latch for "C[30]" at ALU.v(12)
-Info (10041): Inferred latch for "C[31]" at ALU.v(12)
-Info (10041): Inferred latch for "C[32]" at ALU.v(12)
-Info (10041): Inferred latch for "C[33]" at ALU.v(12)
-Info (10041): Inferred latch for "C[34]" at ALU.v(12)
-Info (10041): Inferred latch for "C[35]" at ALU.v(12)
-Info (10041): Inferred latch for "C[36]" at ALU.v(12)
-Info (10041): Inferred latch for "C[37]" at ALU.v(12)
-Info (10041): Inferred latch for "C[38]" at ALU.v(12)
-Info (10041): Inferred latch for "C[39]" at ALU.v(12)
-Info (10041): Inferred latch for "C[40]" at ALU.v(12)
-Info (10041): Inferred latch for "C[41]" at ALU.v(12)
-Info (10041): Inferred latch for "C[42]" at ALU.v(12)
-Info (10041): Inferred latch for "C[43]" at ALU.v(12)
-Info (10041): Inferred latch for "C[44]" at ALU.v(12)
-Info (10041): Inferred latch for "C[45]" at ALU.v(12)
-Info (10041): Inferred latch for "C[46]" at ALU.v(12)
-Info (10041): Inferred latch for "C[47]" at ALU.v(12)
-Info (10041): Inferred latch for "C[48]" at ALU.v(12)
-Info (10041): Inferred latch for "C[49]" at ALU.v(12)
-Info (10041): Inferred latch for "C[50]" at ALU.v(12)
-Info (10041): Inferred latch for "C[51]" at ALU.v(12)
-Info (10041): Inferred latch for "C[52]" at ALU.v(12)
-Info (10041): Inferred latch for "C[53]" at ALU.v(12)
-Info (10041): Inferred latch for "C[54]" at ALU.v(12)
-Info (10041): Inferred latch for "C[55]" at ALU.v(12)
-Info (10041): Inferred latch for "C[56]" at ALU.v(12)
-Info (10041): Inferred latch for "C[57]" at ALU.v(12)
-Info (10041): Inferred latch for "C[58]" at ALU.v(12)
-Info (10041): Inferred latch for "C[59]" at ALU.v(12)
-Info (10041): Inferred latch for "C[60]" at ALU.v(12)
-Info (10041): Inferred latch for "C[61]" at ALU.v(12)
-Info (10041): Inferred latch for "C[62]" at ALU.v(12)
-Info (10041): Inferred latch for "C[63]" at ALU.v(12)
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(14): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(15): variable "BusMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(25): variable "ALUControl" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(57): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(62): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(25): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(13): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "C[0]" at ALU.v(13)
+Info (10041): Inferred latch for "C[1]" at ALU.v(13)
+Info (10041): Inferred latch for "C[2]" at ALU.v(13)
+Info (10041): Inferred latch for "C[3]" at ALU.v(13)
+Info (10041): Inferred latch for "C[4]" at ALU.v(13)
+Info (10041): Inferred latch for "C[5]" at ALU.v(13)
+Info (10041): Inferred latch for "C[6]" at ALU.v(13)
+Info (10041): Inferred latch for "C[7]" at ALU.v(13)
+Info (10041): Inferred latch for "C[8]" at ALU.v(13)
+Info (10041): Inferred latch for "C[9]" at ALU.v(13)
+Info (10041): Inferred latch for "C[10]" at ALU.v(13)
+Info (10041): Inferred latch for "C[11]" at ALU.v(13)
+Info (10041): Inferred latch for "C[12]" at ALU.v(13)
+Info (10041): Inferred latch for "C[13]" at ALU.v(13)
+Info (10041): Inferred latch for "C[14]" at ALU.v(13)
+Info (10041): Inferred latch for "C[15]" at ALU.v(13)
+Info (10041): Inferred latch for "C[16]" at ALU.v(13)
+Info (10041): Inferred latch for "C[17]" at ALU.v(13)
+Info (10041): Inferred latch for "C[18]" at ALU.v(13)
+Info (10041): Inferred latch for "C[19]" at ALU.v(13)
+Info (10041): Inferred latch for "C[20]" at ALU.v(13)
+Info (10041): Inferred latch for "C[21]" at ALU.v(13)
+Info (10041): Inferred latch for "C[22]" at ALU.v(13)
+Info (10041): Inferred latch for "C[23]" at ALU.v(13)
+Info (10041): Inferred latch for "C[24]" at ALU.v(13)
+Info (10041): Inferred latch for "C[25]" at ALU.v(13)
+Info (10041): Inferred latch for "C[26]" at ALU.v(13)
+Info (10041): Inferred latch for "C[27]" at ALU.v(13)
+Info (10041): Inferred latch for "C[28]" at ALU.v(13)
+Info (10041): Inferred latch for "C[29]" at ALU.v(13)
+Info (10041): Inferred latch for "C[30]" at ALU.v(13)
+Info (10041): Inferred latch for "C[31]" at ALU.v(13)
+Info (10041): Inferred latch for "C[32]" at ALU.v(13)
+Info (10041): Inferred latch for "C[33]" at ALU.v(13)
+Info (10041): Inferred latch for "C[34]" at ALU.v(13)
+Info (10041): Inferred latch for "C[35]" at ALU.v(13)
+Info (10041): Inferred latch for "C[36]" at ALU.v(13)
+Info (10041): Inferred latch for "C[37]" at ALU.v(13)
+Info (10041): Inferred latch for "C[38]" at ALU.v(13)
+Info (10041): Inferred latch for "C[39]" at ALU.v(13)
+Info (10041): Inferred latch for "C[40]" at ALU.v(13)
+Info (10041): Inferred latch for "C[41]" at ALU.v(13)
+Info (10041): Inferred latch for "C[42]" at ALU.v(13)
+Info (10041): Inferred latch for "C[43]" at ALU.v(13)
+Info (10041): Inferred latch for "C[44]" at ALU.v(13)
+Info (10041): Inferred latch for "C[45]" at ALU.v(13)
+Info (10041): Inferred latch for "C[46]" at ALU.v(13)
+Info (10041): Inferred latch for "C[47]" at ALU.v(13)
+Info (10041): Inferred latch for "C[48]" at ALU.v(13)
+Info (10041): Inferred latch for "C[49]" at ALU.v(13)
+Info (10041): Inferred latch for "C[50]" at ALU.v(13)
+Info (10041): Inferred latch for "C[51]" at ALU.v(13)
+Info (10041): Inferred latch for "C[52]" at ALU.v(13)
+Info (10041): Inferred latch for "C[53]" at ALU.v(13)
+Info (10041): Inferred latch for "C[54]" at ALU.v(13)
+Info (10041): Inferred latch for "C[55]" at ALU.v(13)
+Info (10041): Inferred latch for "C[56]" at ALU.v(13)
+Info (10041): Inferred latch for "C[57]" at ALU.v(13)
+Info (10041): Inferred latch for "C[58]" at ALU.v(13)
+Info (10041): Inferred latch for "C[59]" at ALU.v(13)
+Info (10041): Inferred latch for "C[60]" at ALU.v(13)
+Info (10041): Inferred latch for "C[61]" at ALU.v(13)
+Info (10041): Inferred latch for "C[62]" at ALU.v(13)
+Info (10041): Inferred latch for "C[63]" at ALU.v(13)
+Info (12128): Elaborating entity "ZMux" for hierarchy "ZMux:ZMUX"
+Warning (10235): Verilog HDL Always Construct warning at ZMux.v(10): variable "ZSelect" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ZMux.v(11): variable "ZMuxIn" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ZMux.v(14): variable "ZMuxIn" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus"
 Warning (10240): Verilog HDL Always Construct warning at Bus.v(24): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct
 Warning (10034): Output port "S0" at Bus.v(11) has no driver
@@ -332,46 +331,46 @@ Warning (10034): Output port "S1" at Bus.v(11) has no driver
 Warning (10034): Output port "S2" at Bus.v(11) has no driver
 Warning (10034): Output port "S3" at Bus.v(11) has no driver
 Warning (10034): Output port "S4" at Bus.v(11) has no driver
-Info (10041): Inferred latch for "q[0]" at Bus.v(93)
-Info (10041): Inferred latch for "q[1]" at Bus.v(93)
-Info (10041): Inferred latch for "q[2]" at Bus.v(93)
-Info (10041): Inferred latch for "q[3]" at Bus.v(93)
-Info (10041): Inferred latch for "q[4]" at Bus.v(93)
-Info (10041): Inferred latch for "q[5]" at Bus.v(93)
-Info (10041): Inferred latch for "q[6]" at Bus.v(93)
-Info (10041): Inferred latch for "q[7]" at Bus.v(93)
-Info (10041): Inferred latch for "q[8]" at Bus.v(93)
-Info (10041): Inferred latch for "q[9]" at Bus.v(93)
-Info (10041): Inferred latch for "q[10]" at Bus.v(93)
-Info (10041): Inferred latch for "q[11]" at Bus.v(93)
-Info (10041): Inferred latch for "q[12]" at Bus.v(93)
-Info (10041): Inferred latch for "q[13]" at Bus.v(93)
-Info (10041): Inferred latch for "q[14]" at Bus.v(93)
-Info (10041): Inferred latch for "q[15]" at Bus.v(93)
-Info (10041): Inferred latch for "q[16]" at Bus.v(93)
-Info (10041): Inferred latch for "q[17]" at Bus.v(93)
-Info (10041): Inferred latch for "q[18]" at Bus.v(93)
-Info (10041): Inferred latch for "q[19]" at Bus.v(93)
-Info (10041): Inferred latch for "q[20]" at Bus.v(93)
-Info (10041): Inferred latch for "q[21]" at Bus.v(93)
-Info (10041): Inferred latch for "q[22]" at Bus.v(93)
-Info (10041): Inferred latch for "q[23]" at Bus.v(93)
-Info (10041): Inferred latch for "q[24]" at Bus.v(93)
-Info (10041): Inferred latch for "q[25]" at Bus.v(93)
-Info (10041): Inferred latch for "q[26]" at Bus.v(93)
-Info (10041): Inferred latch for "q[27]" at Bus.v(93)
-Info (10041): Inferred latch for "q[28]" at Bus.v(93)
-Info (10041): Inferred latch for "q[29]" at Bus.v(93)
-Info (10041): Inferred latch for "q[30]" at Bus.v(93)
-Info (10041): Inferred latch for "q[31]" at Bus.v(93)
+Info (10041): Inferred latch for "q[0]" at Bus.v(96)
+Info (10041): Inferred latch for "q[1]" at Bus.v(96)
+Info (10041): Inferred latch for "q[2]" at Bus.v(96)
+Info (10041): Inferred latch for "q[3]" at Bus.v(96)
+Info (10041): Inferred latch for "q[4]" at Bus.v(96)
+Info (10041): Inferred latch for "q[5]" at Bus.v(96)
+Info (10041): Inferred latch for "q[6]" at Bus.v(96)
+Info (10041): Inferred latch for "q[7]" at Bus.v(96)
+Info (10041): Inferred latch for "q[8]" at Bus.v(96)
+Info (10041): Inferred latch for "q[9]" at Bus.v(96)
+Info (10041): Inferred latch for "q[10]" at Bus.v(96)
+Info (10041): Inferred latch for "q[11]" at Bus.v(96)
+Info (10041): Inferred latch for "q[12]" at Bus.v(96)
+Info (10041): Inferred latch for "q[13]" at Bus.v(96)
+Info (10041): Inferred latch for "q[14]" at Bus.v(96)
+Info (10041): Inferred latch for "q[15]" at Bus.v(96)
+Info (10041): Inferred latch for "q[16]" at Bus.v(96)
+Info (10041): Inferred latch for "q[17]" at Bus.v(96)
+Info (10041): Inferred latch for "q[18]" at Bus.v(96)
+Info (10041): Inferred latch for "q[19]" at Bus.v(96)
+Info (10041): Inferred latch for "q[20]" at Bus.v(96)
+Info (10041): Inferred latch for "q[21]" at Bus.v(96)
+Info (10041): Inferred latch for "q[22]" at Bus.v(96)
+Info (10041): Inferred latch for "q[23]" at Bus.v(96)
+Info (10041): Inferred latch for "q[24]" at Bus.v(96)
+Info (10041): Inferred latch for "q[25]" at Bus.v(96)
+Info (10041): Inferred latch for "q[26]" at Bus.v(96)
+Info (10041): Inferred latch for "q[27]" at Bus.v(96)
+Info (10041): Inferred latch for "q[28]" at Bus.v(96)
+Info (10041): Inferred latch for "q[29]" at Bus.v(96)
+Info (10041): Inferred latch for "q[30]" at Bus.v(96)
+Info (10041): Inferred latch for "q[31]" at Bus.v(96)
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "clear" is missing source, defaulting to GND
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/elec374-Lab/output_files/elec374-lab.map.smsg
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 59 warnings
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 63 warnings
     Info: Peak virtual memory: 4565 megabytes
-    Info: Processing ended: Tue Jan 31 00:07:00 2023
+    Info: Processing ended: Tue Jan 31 22:02:09 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +--------------------------------------------+
