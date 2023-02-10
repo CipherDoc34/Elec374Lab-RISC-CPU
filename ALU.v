@@ -8,6 +8,8 @@ module ALU(
 reg [31:0]A;
 reg [31:0]B;
 reg [63:0]C;
+wire [63:0]boothOutput;
+BoothAlgorithm mul(A, B, boothOutput);
 wire [31:0]lookaheadOut;
 //integer i;
 lookaheadadder addSub(A,B,ALUControl[2],lookaheadOut);
@@ -65,7 +67,7 @@ always @ (ALUin) begin
 		end
 		
 		5'b01111 : begin //mul
-			C = A * B;
+			C = boothOutput;
 		end
 		
 		5'b10000 : begin //div
