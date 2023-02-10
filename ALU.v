@@ -8,7 +8,9 @@ module ALU(
 reg [31:0]A;
 reg [31:0]B;
 reg [63:0]C;
+wire [31:0]lookaheadOut;
 //integer i;
+lookaheadadder addSub(A,B,ALUControl[2],lookaheadOut);
 
 always @ (ALUin) begin
 	A = YMuxOut;
@@ -25,11 +27,11 @@ always @ (ALUin) begin
 	case(ALUControl)
 		
 		5'b00011 : begin//add
-			C = A + B;
+			C = lookaheadOut;
 		end
 		
 		5'b00100 : begin //sub
-			C = A - B;
+			C = lookaheadOut;
 		end
 		
 		5'b00101 : begin //and
