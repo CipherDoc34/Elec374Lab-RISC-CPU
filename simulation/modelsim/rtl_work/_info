@@ -4,12 +4,12 @@ K3
 cModel Technology
 Z0 dC:\elec374\Elec374Lab-RISC-CPU\simulation\modelsim
 vALU
-I>_lBf4;Xj`m>bR9=aET`Q1
+I5gYC>b1O0hVKdOB0e^l>L3
 VRIMzMjkk@`HKeS]8^K;Vh2
-Z1 dC:\elec374\Elec374Lab-RISC-CPU\simulation\modelsim
-w1675992540
-8C:/elec374/Elec374Lab-RISC-CPU/ALU.v
-FC:/elec374/Elec374Lab-RISC-CPU/ALU.v
+Z1 dC:\altera\13.0sp1\elec374-Lab\simulation\modelsim
+w1676007373
+8C:/altera/13.0sp1/elec374-Lab/ALU.v
+FC:/altera/13.0sp1/elec374-Lab/ALU.v
 L0 1
 Z2 OV;L;10.1d;51
 r1
@@ -18,40 +18,40 @@ Z3 o-vlog01compat -work work -O0
 Z4 !s92 -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU -O0
 n@a@l@u
 !i10b 1
-!s100 WhJ_R82l>o?h4DiETBEB43
+!s100 8S1<KAMeXCQaYA>_6O3AC3
 !s85 0
-!s108 1675992565.850000
-!s107 C:/elec374/Elec374Lab-RISC-CPU/ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/elec374/Elec374Lab-RISC-CPU|C:/elec374/Elec374Lab-RISC-CPU/ALU.v|
+!s108 1676007540.840000
+!s107 C:/altera/13.0sp1/elec374-Lab/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/ALU.v|
 !s101 -O0
-vBoothAlgorithm
-Iibb;znA8aJoWGfV9Tb`802
-V;^0ZjJf7QjiVH@ji1GU=63
+vBCell
+Id7HL@JiJ<PHjf:<EA?bJO3
+VcoG;noh`9:[d2D7@EGgDW1
 R1
-w1675991475
-8C:/elec374/Elec374Lab-RISC-CPU/BoothsAlgorithm.v
-FC:/elec374/Elec374Lab-RISC-CPU/BoothsAlgorithm.v
-L0 1
+w1676004822
+8C:/altera/13.0sp1/elec374-Lab/bcell.v
+FC:/altera/13.0sp1/elec374-Lab/bcell.v
+L0 19
 R2
 r1
 31
 R3
-n@booth@algorithm
 R4
+n@b@cell
 !i10b 1
-!s100 MlN2bVE3O@:F4HhBBT6JO2
+!s100 ULdR9bMMfdc0E4bk18fH?3
 !s85 0
-!s108 1675992565.567000
-!s107 C:/elec374/Elec374Lab-RISC-CPU/BoothsAlgorithm.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/elec374/Elec374Lab-RISC-CPU|C:/elec374/Elec374Lab-RISC-CPU/BoothsAlgorithm.v|
+!s108 1676007541.009000
+!s107 C:/altera/13.0sp1/elec374-Lab/bcell.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/bcell.v|
 !s101 -O0
 vBus
 I[cIT9eg_zWS0nWVGna=oC2
 VH9mCECF]f7g3?loSEHFRH1
 R1
-Z5 w1675992071
-8C:/elec374/Elec374Lab-RISC-CPU/Bus.v
-FC:/elec374/Elec374Lab-RISC-CPU/Bus.v
+Z5 w1675992789
+8C:/altera/13.0sp1/elec374-Lab/Bus.v
+FC:/altera/13.0sp1/elec374-Lab/Bus.v
 L0 1
 R2
 r1
@@ -62,17 +62,37 @@ n@bus
 !i10b 1
 !s100 KGCUVDTH30;87>mm:X;ho2
 !s85 0
-!s108 1675992565.910000
-!s107 C:/elec374/Elec374Lab-RISC-CPU/Bus.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/elec374/Elec374Lab-RISC-CPU|C:/elec374/Elec374Lab-RISC-CPU/Bus.v|
+!s108 1676007540.884000
+!s107 C:/altera/13.0sp1/elec374-Lab/Bus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/Bus.v|
+!s101 -O0
+vcarrylookaheadlogic
+I?dNFj4m?f:jHRNozW`Lg_1
+V@zaJoLmd>V=WogIIzTUWZ2
+R1
+w1676004869
+8C:/altera/13.0sp1/elec374-Lab/carrylookaheadlogic.v
+FC:/altera/13.0sp1/elec374-Lab/carrylookaheadlogic.v
+L0 19
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 L?YLKzE]VbYV[Zj83hTPP3
+!s85 0
+!s108 1676007540.648000
+!s107 C:/altera/13.0sp1/elec374-Lab/carrylookaheadlogic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/carrylookaheadlogic.v|
 !s101 -O0
 vDataPath
-IhikNFZUfebAQG@2zVm_;V0
+IC2_6:[l^aJgl<0aD[YNko0
 VM`61`z57>HNPk@V:8ig=^3
 R1
-R5
-8C:/elec374/Elec374Lab-RISC-CPU/DataPath.v
-FC:/elec374/Elec374Lab-RISC-CPU/DataPath.v
+w1676007514
+8C:/altera/13.0sp1/elec374-Lab/DataPath.v
+FC:/altera/13.0sp1/elec374-Lab/DataPath.v
 L0 1
 R2
 r1
@@ -81,32 +101,73 @@ R3
 R4
 n@data@path
 !i10b 1
-!s100 eTFI>FUMB^bd88^GY1C]X0
+!s100 ;`U<bBM1><6MKUCMo]XF62
 !s85 0
-!s108 1675992565.716000
-!s107 C:/elec374/Elec374Lab-RISC-CPU/DataPath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/elec374/Elec374Lab-RISC-CPU|C:/elec374/Elec374Lab-RISC-CPU/DataPath.v|
+!s108 1676007540.754000
+!s107 C:/altera/13.0sp1/elec374-Lab/DataPath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/DataPath.v|
 !s101 -O0
 vdatapath_tb
 !i10b 1
-!s100 lBVjOLK>J>IAaiDPcVQQN0
-IS[6V6WCa8_QiFDVoAzaN=0
+!s100 8HJN>^7MRB3g76ThUnnkN3
+IMbN1XOOUPiY9XJ>4d2M[o0
 Vg^M0jT^eTJTRPdF4JcHC=0
 R1
-w1675992253
-8C:/elec374/Elec374Lab-RISC-CPU/datapath_tb.v
-FC:/elec374/Elec374Lab-RISC-CPU/datapath_tb.v
+w1676007478
+8C:/altera/13.0sp1/elec374-Lab/datapath_tb.v
+FC:/altera/13.0sp1/elec374-Lab/datapath_tb.v
 L0 3
 R2
 r1
 !s85 0
 31
-!s108 1675992566.038000
-!s107 C:/elec374/Elec374Lab-RISC-CPU/datapath_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/elec374/Elec374Lab-RISC-CPU|C:/elec374/Elec374Lab-RISC-CPU/datapath_tb.v|
+!s108 1676007541.051000
+!s107 C:/altera/13.0sp1/elec374-Lab/datapath_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/datapath_tb.v|
 !s101 -O0
 R3
 R4
+vFourBitAdder
+IUA>1eXZ>4aNe2emAbFdj`1
+VMP<CiV8HGE9[VUoG8Dk>=1
+R1
+w1676004834
+8C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v
+FC:/altera/13.0sp1/elec374-Lab/FourBitAdder.v
+L0 19
+R2
+r1
+31
+R3
+R4
+n@four@bit@adder
+!i10b 1
+!s100 LZ:UTl:T@WcbAEa<:BUXK0
+!s85 0
+!s108 1676007540.608000
+!s107 C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v|
+!s101 -O0
+vlookaheadadder
+IXmL<GBYMMN[1gYz=g9=oL3
+Vz^CID4<XO9kF[eEo3ezm30
+R1
+w1676007205
+8C:/altera/13.0sp1/elec374-Lab/lookaheadadder.v
+FC:/altera/13.0sp1/elec374-Lab/lookaheadadder.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Oj3c3bCPki_3EU6bfC54:3
+!s85 0
+!s108 1676007540.967000
+!s107 C:/altera/13.0sp1/elec374-Lab/lookaheadadder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/lookaheadadder.v|
+!s101 -O0
 vMDR
 IGik0N4T4F?TMzMIXISUdm0
 V?`EL4UCE0h4;mbl2TUJLD3
@@ -124,9 +185,9 @@ n@m@d@r
 !i10b 1
 !s100 P8XmBUiGn:[KLLd7colUR1
 !s85 0
-!s108 1675992565.790000
-!s107 C:/elec374/Elec374Lab-RISC-CPU/MDR.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/elec374/Elec374Lab-RISC-CPU|C:/elec374/Elec374Lab-RISC-CPU/MDR.v|
+!s108 1676007540.797000
+!s107 C:/altera/13.0sp1/elec374-Lab/MDR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/MDR.v|
 !s101 -O0
 vregister
 IF?[]Y:NFTAZSEln05MZ4L1
@@ -144,17 +205,59 @@ R4
 !i10b 1
 !s100 J2R?4VMUkhUS<LHcC_BY40
 !s85 0
-!s108 1675992565.628000
-!s107 C:/elec374/Elec374Lab-RISC-CPU/register.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/elec374/Elec374Lab-RISC-CPU|C:/elec374/Elec374Lab-RISC-CPU/register.v|
+!s108 1676007540.711000
+!s107 C:/altera/13.0sp1/elec374-Lab/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/register.v|
+!s101 -O0
+vSixteenBitAdder
+IEc1I7NbTf?fP1P^kQ`SgU0
+V8@b8^]a4>F`YzJ_NSF=dT3
+R1
+w1676004844
+8C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v
+FC:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v
+L0 19
+R2
+r1
+31
+R3
+R4
+n@sixteen@bit@adder
+!i10b 1
+!s100 ;2GcHb24@dNlQlTFmaQbn0
+!s85 0
+!s108 1676007540.567000
+!s107 C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v|
+!s101 -O0
+vThirtyTwoBitAdder
+IL8SZOn[eL@@4WJ1>3I[EN3
+Vk2FIjjbjDjEkeMQY>l;Ji1
+R1
+w1676004856
+8C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v
+FC:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v
+L0 19
+R2
+r1
+31
+R3
+n@thirty@two@bit@adder
+R4
+!i10b 1
+!s100 >j_HHb1mlNn<L2mWDOO0b3
+!s85 0
+!s108 1676007540.523000
+!s107 C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v|
 !s101 -O0
 vZMux
 IZn4f13FbCM>m7nFJoo:ln3
 Vhz_=9k8UFYfPcm7A6JnE^0
 R1
 R5
-8C:/elec374/Elec374Lab-RISC-CPU/ZMux.v
-FC:/elec374/Elec374Lab-RISC-CPU/ZMux.v
+8C:/altera/13.0sp1/elec374-Lab/ZMux.v
+FC:/altera/13.0sp1/elec374-Lab/ZMux.v
 L0 1
 R2
 r1
@@ -165,7 +268,7 @@ n@z@mux
 !i10b 1
 !s100 F]e[m]dd4K`bM3D=4I:Jc2
 !s85 0
-!s108 1675992565.979000
-!s107 C:/elec374/Elec374Lab-RISC-CPU/ZMux.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/elec374/Elec374Lab-RISC-CPU|C:/elec374/Elec374Lab-RISC-CPU/ZMux.v|
+!s108 1676007540.926000
+!s107 C:/altera/13.0sp1/elec374-Lab/ZMux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/ZMux.v|
 !s101 -O0

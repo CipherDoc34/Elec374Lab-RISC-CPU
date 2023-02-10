@@ -5,13 +5,18 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/BoothsAlgorithm.v}
-vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/register.v}
-vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/DataPath.v}
-vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/MDR.v}
-vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/ALU.v}
-vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/Bus.v}
-vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/ZMux.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/carrylookaheadlogic.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/register.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/DataPath.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/MDR.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ALU.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/Bus.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ZMux.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/lookaheadadder.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/bcell.v}
 
 vlog -vlog01compat -work work +incdir+C:/elec374/Elec374Lab-RISC-CPU {C:/elec374/Elec374Lab-RISC-CPU/datapath_tb.v}
 
