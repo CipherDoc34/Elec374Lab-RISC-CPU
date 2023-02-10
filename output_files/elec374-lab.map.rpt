@@ -1,5 +1,5 @@
 Analysis & Elaboration report for elec374-lab
-Tue Jan 31 22:02:09 2023
+Thu Feb 09 20:29:08 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -39,7 +39,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Tue Jan 31 22:02:09 2023           ;
+; Analysis & Elaboration Status      ; Successful - Thu Feb 09 20:29:08 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; elec374-lab                                     ;
 ; Top-level Entity Name              ; DataPath                                        ;
@@ -62,7 +62,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -182,9 +182,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 31 22:02:08 2023
+    Info: Processing started: Thu Feb 09 20:29:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off elec374-lab -c elec374-lab --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file boothsalgorithm.v
+    Info (12023): Found entity 1: BoothAlgorithm
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
     Info (12023): Found entity 1: register
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
@@ -201,6 +203,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file zmux.v
     Info (12023): Found entity 1: ZMux
 Info (12021): Found 1 design units, including 1 entities, in source file b-cell.bdf
     Info (12023): Found entity 1: B-Cell
+Info (12021): Found 1 design units, including 1 entities, in source file 4bitadder.bdf
+    Info (12023): Found entity 1: 4BitAdder
 Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(49): created implicit net for "clear"
 Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(49): created implicit net for "R0in"
 Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(53): created implicit net for "R4in"
@@ -249,77 +253,83 @@ Info (12127): Elaborating entity "DataPath" for the top level hierarchy
 Info (12128): Elaborating entity "register" for hierarchy "register:R0"
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MDR"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu"
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(14): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(15): variable "BusMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(25): variable "ALUControl" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(57): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(62): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(25): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(13): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "C[0]" at ALU.v(13)
-Info (10041): Inferred latch for "C[1]" at ALU.v(13)
-Info (10041): Inferred latch for "C[2]" at ALU.v(13)
-Info (10041): Inferred latch for "C[3]" at ALU.v(13)
-Info (10041): Inferred latch for "C[4]" at ALU.v(13)
-Info (10041): Inferred latch for "C[5]" at ALU.v(13)
-Info (10041): Inferred latch for "C[6]" at ALU.v(13)
-Info (10041): Inferred latch for "C[7]" at ALU.v(13)
-Info (10041): Inferred latch for "C[8]" at ALU.v(13)
-Info (10041): Inferred latch for "C[9]" at ALU.v(13)
-Info (10041): Inferred latch for "C[10]" at ALU.v(13)
-Info (10041): Inferred latch for "C[11]" at ALU.v(13)
-Info (10041): Inferred latch for "C[12]" at ALU.v(13)
-Info (10041): Inferred latch for "C[13]" at ALU.v(13)
-Info (10041): Inferred latch for "C[14]" at ALU.v(13)
-Info (10041): Inferred latch for "C[15]" at ALU.v(13)
-Info (10041): Inferred latch for "C[16]" at ALU.v(13)
-Info (10041): Inferred latch for "C[17]" at ALU.v(13)
-Info (10041): Inferred latch for "C[18]" at ALU.v(13)
-Info (10041): Inferred latch for "C[19]" at ALU.v(13)
-Info (10041): Inferred latch for "C[20]" at ALU.v(13)
-Info (10041): Inferred latch for "C[21]" at ALU.v(13)
-Info (10041): Inferred latch for "C[22]" at ALU.v(13)
-Info (10041): Inferred latch for "C[23]" at ALU.v(13)
-Info (10041): Inferred latch for "C[24]" at ALU.v(13)
-Info (10041): Inferred latch for "C[25]" at ALU.v(13)
-Info (10041): Inferred latch for "C[26]" at ALU.v(13)
-Info (10041): Inferred latch for "C[27]" at ALU.v(13)
-Info (10041): Inferred latch for "C[28]" at ALU.v(13)
-Info (10041): Inferred latch for "C[29]" at ALU.v(13)
-Info (10041): Inferred latch for "C[30]" at ALU.v(13)
-Info (10041): Inferred latch for "C[31]" at ALU.v(13)
-Info (10041): Inferred latch for "C[32]" at ALU.v(13)
-Info (10041): Inferred latch for "C[33]" at ALU.v(13)
-Info (10041): Inferred latch for "C[34]" at ALU.v(13)
-Info (10041): Inferred latch for "C[35]" at ALU.v(13)
-Info (10041): Inferred latch for "C[36]" at ALU.v(13)
-Info (10041): Inferred latch for "C[37]" at ALU.v(13)
-Info (10041): Inferred latch for "C[38]" at ALU.v(13)
-Info (10041): Inferred latch for "C[39]" at ALU.v(13)
-Info (10041): Inferred latch for "C[40]" at ALU.v(13)
-Info (10041): Inferred latch for "C[41]" at ALU.v(13)
-Info (10041): Inferred latch for "C[42]" at ALU.v(13)
-Info (10041): Inferred latch for "C[43]" at ALU.v(13)
-Info (10041): Inferred latch for "C[44]" at ALU.v(13)
-Info (10041): Inferred latch for "C[45]" at ALU.v(13)
-Info (10041): Inferred latch for "C[46]" at ALU.v(13)
-Info (10041): Inferred latch for "C[47]" at ALU.v(13)
-Info (10041): Inferred latch for "C[48]" at ALU.v(13)
-Info (10041): Inferred latch for "C[49]" at ALU.v(13)
-Info (10041): Inferred latch for "C[50]" at ALU.v(13)
-Info (10041): Inferred latch for "C[51]" at ALU.v(13)
-Info (10041): Inferred latch for "C[52]" at ALU.v(13)
-Info (10041): Inferred latch for "C[53]" at ALU.v(13)
-Info (10041): Inferred latch for "C[54]" at ALU.v(13)
-Info (10041): Inferred latch for "C[55]" at ALU.v(13)
-Info (10041): Inferred latch for "C[56]" at ALU.v(13)
-Info (10041): Inferred latch for "C[57]" at ALU.v(13)
-Info (10041): Inferred latch for "C[58]" at ALU.v(13)
-Info (10041): Inferred latch for "C[59]" at ALU.v(13)
-Info (10041): Inferred latch for "C[60]" at ALU.v(13)
-Info (10041): Inferred latch for "C[61]" at ALU.v(13)
-Info (10041): Inferred latch for "C[62]" at ALU.v(13)
-Info (10041): Inferred latch for "C[63]" at ALU.v(13)
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(16): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(17): variable "BusMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(27): variable "ALUControl" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(59): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(64): variable "YMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(68): variable "boothOutput" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(27): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(15): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "C[0]" at ALU.v(15)
+Info (10041): Inferred latch for "C[1]" at ALU.v(15)
+Info (10041): Inferred latch for "C[2]" at ALU.v(15)
+Info (10041): Inferred latch for "C[3]" at ALU.v(15)
+Info (10041): Inferred latch for "C[4]" at ALU.v(15)
+Info (10041): Inferred latch for "C[5]" at ALU.v(15)
+Info (10041): Inferred latch for "C[6]" at ALU.v(15)
+Info (10041): Inferred latch for "C[7]" at ALU.v(15)
+Info (10041): Inferred latch for "C[8]" at ALU.v(15)
+Info (10041): Inferred latch for "C[9]" at ALU.v(15)
+Info (10041): Inferred latch for "C[10]" at ALU.v(15)
+Info (10041): Inferred latch for "C[11]" at ALU.v(15)
+Info (10041): Inferred latch for "C[12]" at ALU.v(15)
+Info (10041): Inferred latch for "C[13]" at ALU.v(15)
+Info (10041): Inferred latch for "C[14]" at ALU.v(15)
+Info (10041): Inferred latch for "C[15]" at ALU.v(15)
+Info (10041): Inferred latch for "C[16]" at ALU.v(15)
+Info (10041): Inferred latch for "C[17]" at ALU.v(15)
+Info (10041): Inferred latch for "C[18]" at ALU.v(15)
+Info (10041): Inferred latch for "C[19]" at ALU.v(15)
+Info (10041): Inferred latch for "C[20]" at ALU.v(15)
+Info (10041): Inferred latch for "C[21]" at ALU.v(15)
+Info (10041): Inferred latch for "C[22]" at ALU.v(15)
+Info (10041): Inferred latch for "C[23]" at ALU.v(15)
+Info (10041): Inferred latch for "C[24]" at ALU.v(15)
+Info (10041): Inferred latch for "C[25]" at ALU.v(15)
+Info (10041): Inferred latch for "C[26]" at ALU.v(15)
+Info (10041): Inferred latch for "C[27]" at ALU.v(15)
+Info (10041): Inferred latch for "C[28]" at ALU.v(15)
+Info (10041): Inferred latch for "C[29]" at ALU.v(15)
+Info (10041): Inferred latch for "C[30]" at ALU.v(15)
+Info (10041): Inferred latch for "C[31]" at ALU.v(15)
+Info (10041): Inferred latch for "C[32]" at ALU.v(15)
+Info (10041): Inferred latch for "C[33]" at ALU.v(15)
+Info (10041): Inferred latch for "C[34]" at ALU.v(15)
+Info (10041): Inferred latch for "C[35]" at ALU.v(15)
+Info (10041): Inferred latch for "C[36]" at ALU.v(15)
+Info (10041): Inferred latch for "C[37]" at ALU.v(15)
+Info (10041): Inferred latch for "C[38]" at ALU.v(15)
+Info (10041): Inferred latch for "C[39]" at ALU.v(15)
+Info (10041): Inferred latch for "C[40]" at ALU.v(15)
+Info (10041): Inferred latch for "C[41]" at ALU.v(15)
+Info (10041): Inferred latch for "C[42]" at ALU.v(15)
+Info (10041): Inferred latch for "C[43]" at ALU.v(15)
+Info (10041): Inferred latch for "C[44]" at ALU.v(15)
+Info (10041): Inferred latch for "C[45]" at ALU.v(15)
+Info (10041): Inferred latch for "C[46]" at ALU.v(15)
+Info (10041): Inferred latch for "C[47]" at ALU.v(15)
+Info (10041): Inferred latch for "C[48]" at ALU.v(15)
+Info (10041): Inferred latch for "C[49]" at ALU.v(15)
+Info (10041): Inferred latch for "C[50]" at ALU.v(15)
+Info (10041): Inferred latch for "C[51]" at ALU.v(15)
+Info (10041): Inferred latch for "C[52]" at ALU.v(15)
+Info (10041): Inferred latch for "C[53]" at ALU.v(15)
+Info (10041): Inferred latch for "C[54]" at ALU.v(15)
+Info (10041): Inferred latch for "C[55]" at ALU.v(15)
+Info (10041): Inferred latch for "C[56]" at ALU.v(15)
+Info (10041): Inferred latch for "C[57]" at ALU.v(15)
+Info (10041): Inferred latch for "C[58]" at ALU.v(15)
+Info (10041): Inferred latch for "C[59]" at ALU.v(15)
+Info (10041): Inferred latch for "C[60]" at ALU.v(15)
+Info (10041): Inferred latch for "C[61]" at ALU.v(15)
+Info (10041): Inferred latch for "C[62]" at ALU.v(15)
+Info (10041): Inferred latch for "C[63]" at ALU.v(15)
+Info (12128): Elaborating entity "BoothAlgorithm" for hierarchy "ALU:alu|BoothAlgorithm:mul"
+Warning (10199): Verilog HDL Case Statement warning at BoothsAlgorithm.v(25): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at BoothsAlgorithm.v(26): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at BoothsAlgorithm.v(28): case item expression never matches the case expression
+Warning (10230): Verilog HDL assignment warning at BoothsAlgorithm.v(35): truncated value with size 66 to match size of target (64)
 Info (12128): Elaborating entity "ZMux" for hierarchy "ZMux:ZMUX"
 Warning (10235): Verilog HDL Always Construct warning at ZMux.v(10): variable "ZSelect" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at ZMux.v(11): variable "ZMuxIn" is read inside the Always Construct but isn't in the Always Construct's Event Control
@@ -365,10 +375,10 @@ Info (10041): Inferred latch for "q[30]" at Bus.v(96)
 Info (10041): Inferred latch for "q[31]" at Bus.v(96)
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "clear" is missing source, defaulting to GND
-Info (144001): Generated suppressed messages file C:/altera/13.0sp1/elec374-Lab/output_files/elec374-lab.map.smsg
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 4565 megabytes
-    Info: Processing ended: Tue Jan 31 22:02:09 2023
+Info (144001): Generated suppressed messages file C:/elec374/Elec374Lab-RISC-CPU/output_files/elec374-lab.map.smsg
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 68 warnings
+    Info: Peak virtual memory: 4564 megabytes
+    Info: Processing ended: Thu Feb 09 20:29:08 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -376,6 +386,6 @@ Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 63 warn
 +--------------------------------------------+
 ; Analysis & Elaboration Suppressed Messages ;
 +--------------------------------------------+
-The suppressed messages can be found in C:/altera/13.0sp1/elec374-Lab/output_files/elec374-lab.map.smsg.
+The suppressed messages can be found in C:/elec374/Elec374Lab-RISC-CPU/output_files/elec374-lab.map.smsg.
 
 

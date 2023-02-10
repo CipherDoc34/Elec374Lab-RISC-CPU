@@ -92,7 +92,7 @@ T2: begin
 #15 MDRout <= 0; IRin <= 0;
 end
 T3: begin
-#10 R2out <= 1; alucontrol <= 5'b10000; Yin <= 1;
+#10 R2out <= 1; alucontrol <= 5'b01111; Yin <= 1;
 #15 R2out <= 0; Yin <= 0;
 end
 T4: begin
