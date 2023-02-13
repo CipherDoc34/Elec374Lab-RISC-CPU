@@ -1,15 +1,15 @@
-Fitter Status : Successful - Fri Feb 10 11:19:20 2023
+Fitter Status : Successful - Mon Feb 13 16:04:17 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : elec374-lab
 Top-level Entity Name : DataPath
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 3,961 / 15,408 ( 26 % )
-    Total combinational functions : 3,918 / 15,408 ( 25 % )
-    Dedicated logic registers : 192 / 15,408 ( 1 % )
-Total registers : 192
-Total pins : 89 / 347 ( 26 % )
+Total logic elements : 5,956 / 15,408 ( 39 % )
+    Total combinational functions : 5,878 / 15,408 ( 38 % )
+    Dedicated logic registers : 352 / 15,408 ( 2 % )
+Total registers : 352
+Total pins : 100 / 347 ( 29 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )

@@ -9,7 +9,7 @@ module DataPath(
 	input clock, clear,
 	input R2in, R4in, R5in*/
 	
-	input PCout, ZLOout, MDRout, R2out, R3out, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, R1in, R2in, R3in, clock, ALUin, ZMuxEnbale, ZSelect, ZMuxOut,
+	input PCout, ZLOout, MDRout,R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, clock, ALUin, ZMuxEnbale, ZSelect, ZMuxOut,
 	input [31:0] Mdatain,
 	input [4:0] aluControl,
 	output wire [31:0]out
