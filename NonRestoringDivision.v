@@ -21,16 +21,16 @@ always @(*)
 				M = Divisor;
 				k = 0;
 			end
-			divide = {A, M};
+			divide = {A, Dividend};
           for(i=0;i<32;i=i+1) begin
 						divide = divide << 1;
 						if(divide[64] == 0) begin
 							divide[64:32] = divide[64:32] - M; // sub
-							//divide[0] = 1;
+							divide[0] = 1;
 						end
 						else if(divide[64] == 1) begin 
 							divide[64:32] = divide[64:32] + M; // add
-							//divide[0] = 0;
+							divide[0] = 0;
 						end
 						if(divide[64] == 0) divide[0] = 1;
 						else if(divide[64] == 1) divide[0] = 0;

@@ -1,0 +1,10 @@
+module reg0 (input clear, clock, enable, BAout,
+	input [31:0]BusMuxOut,
+	output wire [31:0]BusMuxIn
+);
+
+wire [31:0]q;
+
+register R0(clear, clock, enable, BusMuxOut, q);
+assign BusMuxIn = q & {32{!BAout}};
+endmodule

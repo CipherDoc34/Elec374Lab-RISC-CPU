@@ -1,18 +1,14 @@
 module DataPath(
-//control signals
-	/*input [31:0]Mdatain,
-	input R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, 
-	input R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
-	input HIout, LOout, ZHIout, ZLOout, PCout, MDRout, PortInout, CSignout,
-	input Read, incPc, IRin, PCin, MDRin, Yin, MARin,
-	input [4:0] aluControl,
-	input clock, clear,
-	input R2in, R4in, R5in*/
-	
-	input PCout, ZLOout, MDRout,R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, clock, ALUin, ZMuxEnbale, ZSelect, ZMuxOut,
+	input PCout, IncPC, ZLOout, MDRout, RAMenable,
+			MARin, PCin, MDRin, IRin, Yin, 
+			//R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
+			//R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in,
+			Gra, Grb, Grc, Rin, Rout, BAout,
+			clock, read, write, clear,
+			ALUin, ZMuxEnbale, ZSelect, ZMuxOut,
 	input [31:0] Mdatain,
 	input [4:0] aluControl,
-	output wire [31:0]out
+	output wire [31:0]DummyOut
 );
 
 wire [31:0] BusMuxOut; 
@@ -35,8 +31,8 @@ wire [31:0] BusMuxInR15;
 wire [31:0] BusMuxInZHI;
 wire [31:0] BusMuxInZLO;
 wire [31:0] BusMuxInPC;
-wire [31:0] BusMuxInIR;
-wire [31:0] BusMuxInMDR;
+wire [31:0] IRout;
+wire [31:0] BusMuxInMDR, MDRDataout;
 wire [31:0] BusMuxInPortIn;
 wire [31:0] BusMuxInCSign;
 wire [31:0] BusMuxInY;
@@ -44,9 +40,12 @@ wire [31:0] BusMuxInHI;
 wire [31:0] BusMuxInLO;
 wire [63:0] ZMuxIn;
 wire [31:0] BusMuxInZMux;
+wire [8:0] MARaddrOut;
+wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
+     R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in;
 
 //General Purpose Registers
-register R0(clear, clock, R0in, BusMuxOut, BusMuxInR0);
+reg0 R0(clear, clock, R0in, BAout, BusMuxOut, BusMuxInR0);
 register R1(clear, clock, R1in, BusMuxOut, BusMuxInR1);
 register R2(clear, clock, R2in, BusMuxOut, BusMuxInR2);
 register R3(clear, clock, R3in, BusMuxOut, BusMuxInR3);
@@ -68,16 +67,26 @@ register HI(clear, clock, HIin, BusMuxOut, BusMuxInHI);
 register LO(clear, clock, LOin, BusMuxOut, BusMuxInLO);
 register ZHI(clear, clock, ZHIin, BusMuxOut, BusMuxInZHI);
 register ZLO(clear, clock, ZLOin, BusMuxOut, BusMuxInZLO);
-register PC(clear, clock, PCin, BusMuxOut, BusMuxInPC);
-register IR(clear, clock, IRin, BusMuxOut, BusMuxInIR);
+pc PC(clear, clock, PCin, IncPC, BusMuxOut, BusMuxInPC);
+register IR(clear, clock, IRin, BusMuxOut, IRout);
 register Y(clear, clock, Yin, BusMuxOut, BusMuxInY);
 
 //Devices
-MDR MDR(clear, clock, MDRin, BusMuxOut, Mdatain, Read, BusMuxInMDR);
+MDR MDR(clear, clock, MDRin, BusMuxOut, Mdatain, read, MDRDataout);
+register #(.DATA_WIDTH_IN(32), .DATA_WIDTH_OUT(9)) 
+		MAR(.clear(clear), .clock(clock), .enable(MARin), .BusMuxOut(BusMuxOut), .BusMuxIn(MARaddrOut));
+RAM RAM(MDRDataout, MARaddrOut, read, write, RAMenable, BusMuxInMDR);
 register InPort(clear, clock, InPortIn, BusMuxOut, BusMuxInPortIn);
-register CSign(clear, clock, CSignIn, BusMuxOut, BusMuxInCSign);
+//register CSign(clear, clock, CSignIn, BusMuxOut, BusMuxInCSign);
 ALU alu(BusMuxInY, BusMuxOut, aluControl, ALUin, ZMuxIn);
 ZMux ZMUX(ZMuxIn, ZSelect, ZMuxEnbale, BusMuxInZMux);
+
+//Select and Encode
+SE SelectAndEncode(Gra, Grb, Grc, Rin, Rout, BAout, IRout, 
+	BusMuxInCSign,
+	{R15in, R14in, R13in, R12in, R11in, R10in, R9in, R8in, R7in, R6in, R5in, R4in, R3in, R2in, R1in, R0in},
+	{R15out, R14out, R13out, R12out, R11out, R10out, R9out, R8out, R7out, R6out, R5out, R4out, R3out, R2out, R1out, R0out}
+);
 
 //bus
 Bus bus(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7,
@@ -87,5 +96,5 @@ Bus bus(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, 
 	R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
 	HIout, LOout, ZHIout, ZLOout, ZMuxOut, PCout, MDRout, PortInout, CSignout,
 	S0, S1, S2, S3, S4, BusMuxOut);
-assign out = BusMuxInR1;
+assign DummyOut = BusMuxInR1;
 endmodule

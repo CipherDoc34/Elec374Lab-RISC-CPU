@@ -1,18 +1,18 @@
-module register(
-	input clear, clock, REnable, 
-	input [31:0]BusMuxOut,
-	output wire [31:0]BusMuxIn
+module register #(parameter DATA_WIDTH_IN = 32,DATA_WIDTH_OUT = 32)(
+	input clear, clock, enable, 
+	input [DATA_WIDTH_IN-1:0]BusMuxOut,
+	output wire [DATA_WIDTH_OUT-1:0]BusMuxIn
 );
-	reg [31:0]q;
+	reg [DATA_WIDTH_IN-1:0]q;
 	
 always @ (posedge clock)
 		begin 
 			if (clear) begin
-				q <= 32'b0;
+				q <= {DATA_WIDTH_IN{1'b0}};
 			end
-			else if (REnable) begin
+			else if (enable) begin
 				q <= BusMuxOut;
 			end
 		end
-	assign BusMuxIn = q;	
+	assign BusMuxIn = q[DATA_WIDTH_OUT-1:0];
 endmodule
