@@ -1,0 +1,11 @@
+`timescale 1ns/10ps
+module load_tb();
+reg R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out;
+reg R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in;
+reg IncPC, Read, clock;
+reg ALUIn, ZMuxEnable, ZSelect, ZMuxOut;
+reg PCout, ZLOout, MDRout;
+reg MARin, PCin, MDRin, IRin, Yin;
+reg [31:0] Mdatain;
+wire [31:0] out;
+reg [4:0] alucontrol;

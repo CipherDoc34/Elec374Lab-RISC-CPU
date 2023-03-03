@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dC:\altera\13.0sp1\elec374-Lab\simulation\modelsim
 vALU
-Imd:]?k=5=6]k[^QiUWQVh2
-VRIMzMjkk@`HKeS]8^K;Vh2
+I?KTAXV92O[lVCF[I]dXh82
+VdDPl4;UEEzPH^c]^J0;952
 Z1 dC:\altera\13.0sp1\elec374-Lab\simulation\modelsim
-w1676335986
+w1677806317
 8C:/altera/13.0sp1/elec374-Lab/ALU.v
 FC:/altera/13.0sp1/elec374-Lab/ALU.v
 L0 1
@@ -18,9 +18,9 @@ Z3 o-vlog01compat -work work -O0
 Z4 !s92 -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab -O0
 n@a@l@u
 !i10b 1
-!s100 GX:BjEZ8@Dd=J]XBle@gz1
+!s100 KSBH>k]GRJfzd^C5?JBQ?3
 !s85 0
-!s108 1676336803.829000
+!s108 1677816505.302000
 !s107 C:/altera/13.0sp1/elec374-Lab/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/ALU.v|
 !s101 -O0
@@ -41,7 +41,7 @@ n@b@cell
 !i10b 1
 !s100 4E>6l>SW[OVPh[DgC<O;`2
 !s85 0
-!s108 1676336803.496000
+!s108 1677816504.953000
 !s107 C:/altera/13.0sp1/elec374-Lab/BCell.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/BCell.v|
 !s101 -O0
@@ -62,7 +62,7 @@ R4
 !i10b 1
 !s100 [NzU>YPH]GU9?7ZlHPGeA1
 !s85 0
-!s108 1676336803.440000
+!s108 1677816504.911000
 !s107 C:/altera/13.0sp1/elec374-Lab/BoothsAlgorithm.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/BoothsAlgorithm.v|
 !s101 -O0
@@ -83,7 +83,7 @@ n@bus
 !i10b 1
 !s100 Z@:4DW3m3KPHgJcF;o:GY1
 !s85 0
-!s108 1676336803.872000
+!s108 1677816505.343000
 !s107 C:/altera/13.0sp1/elec374-Lab/Bus.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/Bus.v|
 !s101 -O0
@@ -103,15 +103,36 @@ R4
 !i10b 1
 !s100 L?YLKzE]VbYV[Zj83hTPP3
 !s85 0
-!s108 1676336803.661000
+!s108 1677816505.136000
 !s107 C:/altera/13.0sp1/elec374-Lab/carrylookaheadlogic.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/carrylookaheadlogic.v|
 !s101 -O0
-vDataPath
-Id:WEYA4iQf`J4RVam=J9M3
-V5LWRgz>7SJLkaZ^GbfOel2
+vconFF
+IEn5l:PhAQUVaj`=?31fil1
+Vme=NkLY2YC2<2o3iB;]m91
 R1
-w1676052655
+w1677807884
+8C:/altera/13.0sp1/elec374-Lab/conff.v
+FC:/altera/13.0sp1/elec374-Lab/conff.v
+L0 1
+R2
+r1
+31
+R3
+R4
+ncon@f@f
+!i10b 1
+!s100 =g6k;VOiiDZ387Wmz]A^=0
+!s85 0
+!s108 1677816505.661000
+!s107 C:/altera/13.0sp1/elec374-Lab/conff.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/conff.v|
+!s101 -O0
+vDataPath
+IbXQ>N[_iO<L:S]n[Gi1P43
+V[Gho0;J_[GYES`NL<5=C30
+R1
+w1677815749
 8C:/altera/13.0sp1/elec374-Lab/DataPath.v
 FC:/altera/13.0sp1/elec374-Lab/DataPath.v
 L0 1
@@ -122,32 +143,12 @@ R3
 R4
 n@data@path
 !i10b 1
-!s100 =z`WezEiLzNbdXKOP;4f>1
+!s100 dJG<n7[1G:AfHW>RnlDXX2
 !s85 0
-!s108 1676336803.743000
+!s108 1677816505.217000
 !s107 C:/altera/13.0sp1/elec374-Lab/DataPath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/DataPath.v|
 !s101 -O0
-vdatapath_tb
-!i10b 1
-!s100 bn@Wc4Y0nf==fM[>Q8agE3
-Im^Nk2:onM[o_M[l57KfdQ3
-V2dY9zz]dkjLdzPA7n_4NI2
-R1
-w1676336795
-8C:/altera/13.0sp1/elec374-Lab/datapath_tb.v
-FC:/altera/13.0sp1/elec374-Lab/datapath_tb.v
-L0 3
-R2
-r1
-!s85 0
-31
-!s108 1676336804.040000
-!s107 C:/altera/13.0sp1/elec374-Lab/datapath_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/datapath_tb.v|
-!s101 -O0
-R3
-R4
 vFourBitAdder
 IUA>1eXZ>4aNe2emAbFdj`1
 VMP<CiV8HGE9[VUoG8Dk>=1
@@ -165,10 +166,30 @@ n@four@bit@adder
 !i10b 1
 !s100 LZ:UTl:T@WcbAEa<:BUXK0
 !s85 0
-!s108 1676336803.620000
+!s108 1677816505.095000
 !s107 C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v|
 !s101 -O0
+vload_tb
+!i10b 1
+!s100 nlXKee6z7Nmc9]7gIGmM?2
+IUgNLlgCLH`o1NH@=_O[:02
+VBkol?ckmb9SnKjhl@]1762
+R1
+w1677816094
+8C:/altera/13.0sp1/elec374-Lab/load_tb.v
+FC:/altera/13.0sp1/elec374-Lab/load_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1677816505.700000
+!s107 C:/altera/13.0sp1/elec374-Lab/load_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/load_tb.v|
+!s101 -O0
+R3
+R4
 vlookaheadadder
 IXmL<GBYMMN[1gYz=g9=oL3
 Vz^CID4<XO9kF[eEo3ezm30
@@ -185,15 +206,15 @@ R4
 !i10b 1
 !s100 Oj3c3bCPki_3EU6bfC54:3
 !s85 0
-!s108 1676336803.954000
+!s108 1677816505.425000
 !s107 C:/altera/13.0sp1/elec374-Lab/lookaheadadder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/lookaheadadder.v|
 !s101 -O0
 vMDR
-Io583:jL<o<IG3P2f1ZSOz0
+IzoDLbBS1IBjJJ;P128_=02
 V?`EL4UCE0h4;mbl2TUJLD3
 R1
-w1675137488
+w1677813304
 8C:/altera/13.0sp1/elec374-Lab/MDR.v
 FC:/altera/13.0sp1/elec374-Lab/MDR.v
 L0 1
@@ -204,9 +225,9 @@ R3
 R4
 n@m@d@r
 !i10b 1
-!s100 AHAU7EoG=STK:dhl;2zTO3
+!s100 a0zoog9jgOmc^`O`_QzVL3
 !s85 0
-!s108 1676336803.787000
+!s108 1677816505.259000
 !s107 C:/altera/13.0sp1/elec374-Lab/MDR.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/MDR.v|
 !s101 -O0
@@ -227,15 +248,76 @@ n@non@restoring@division
 !i10b 1
 !s100 WWcIRac<8FgJEoMi<b9jC0
 !s85 0
-!s108 1676336803.995000
+!s108 1677816505.464000
 !s107 C:/altera/13.0sp1/elec374-Lab/NonRestoringDivision.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/NonRestoringDivision.v|
 !s101 -O0
-vregister
-IgU_DYefW_Khc_A`E[4jmP0
-V_dfm<E8Xb3V1KS3[5]h0U3
+vpc
+IMZoADc`]U?iRhR<1A0R_Z0
+V@j:;S6UeQO?I=S91;X2l:2
 R1
-w1675117223
+w1677718069
+8C:/altera/13.0sp1/elec374-Lab/pc.v
+FC:/altera/13.0sp1/elec374-Lab/pc.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ADI=1JXd?M:i;84>f0FfA1
+!s85 0
+!s108 1677816505.505000
+!s107 C:/altera/13.0sp1/elec374-Lab/pc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/pc.v|
+!s101 -O0
+vRAM
+IJjejRR:ga;>a^5FBH>`lV1
+VK`oW;8Dd[h`>7@hGFJ5i^0
+R1
+w1677815806
+8C:/altera/13.0sp1/elec374-Lab/ram.v
+FC:/altera/13.0sp1/elec374-Lab/ram.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@r@a@m
+!i10b 1
+!s100 0LEO[JK64_J3j:Kf:gVEB1
+!s85 0
+!s108 1677816505.543000
+!s107 C:/altera/13.0sp1/elec374-Lab/ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/ram.v|
+!s101 -O0
+vreg0
+IAR;b7GJ:CYgccAb>>0H<n2
+V8EViWZEMNWK8QC[VGMln92
+R1
+w1677787517
+8C:/altera/13.0sp1/elec374-Lab/reg0.v
+FC:/altera/13.0sp1/elec374-Lab/reg0.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 LTE[>Kgn[V6E_VV:JRUNX3
+!s85 0
+!s108 1677816505.622000
+!s107 C:/altera/13.0sp1/elec374-Lab/reg0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/reg0.v|
+!s101 -O0
+vregister
+I?E1lQ>5Bk3aQ>eVO0R:eG2
+VBPeHYHZif5H92zM7?Oj;73
+R1
+w1677815659
 8C:/altera/13.0sp1/elec374-Lab/register.v
 FC:/altera/13.0sp1/elec374-Lab/register.v
 L0 1
@@ -245,11 +327,32 @@ r1
 R3
 R4
 !i10b 1
-!s100 ;]JfEz16W[V3o<zi[Z6C[1
+!s100 GM1JDESkA70E`iIWi6jP`2
 !s85 0
-!s108 1676336803.702000
+!s108 1677816505.178000
 !s107 C:/altera/13.0sp1/elec374-Lab/register.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/register.v|
+!s101 -O0
+vSE
+IJfHdh<WkCiX_ZbY<o7V8T3
+VmzEflbIhDDz28eSQchXgL0
+R1
+w1677814885
+8C:/altera/13.0sp1/elec374-Lab/se.v
+FC:/altera/13.0sp1/elec374-Lab/se.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@s@e
+!i10b 1
+!s100 `dPDL8WjYf4gzH42I;f<j3
+!s85 0
+!s108 1677816505.584000
+!s107 C:/altera/13.0sp1/elec374-Lab/se.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/se.v|
 !s101 -O0
 vSixteenBitAdder
 IEc1I7NbTf?fP1P^kQ`SgU0
@@ -268,7 +371,7 @@ n@sixteen@bit@adder
 !i10b 1
 !s100 ;2GcHb24@dNlQlTFmaQbn0
 !s85 0
-!s108 1676336803.578000
+!s108 1677816505.032000
 !s107 C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v|
 !s101 -O0
@@ -289,7 +392,7 @@ n@thirty@two@bit@adder
 !i10b 1
 !s100 >j_HHb1mlNn<L2mWDOO0b3
 !s85 0
-!s108 1676336803.537000
+!s108 1677816504.993000
 !s107 C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v|
 !s101 -O0
@@ -310,7 +413,7 @@ n@z@mux
 !i10b 1
 !s100 Nl27SOD]f4`@QVmd@]7Pj0
 !s85 0
-!s108 1676336803.913000
+!s108 1677816505.384000
 !s107 C:/altera/13.0sp1/elec374-Lab/ZMux.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374-Lab|C:/altera/13.0sp1/elec374-Lab/ZMux.v|
 !s101 -O0

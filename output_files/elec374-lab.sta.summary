@@ -3,39 +3,39 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'aluControl[0]'
-Slack : -137.037
-TNS   : -6745.077
-
-Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -5.223
-TNS   : -938.419
+Slack : -133.738
+TNS   : -6626.304
 
 Type  : Slow 1200mV 85C Model Setup 'BAout'
-Slack : -4.627
-TNS   : -115.853
+Slack : -8.539
+TNS   : -238.938
+
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -5.102
+TNS   : -2792.734
 
 Type  : Slow 1200mV 85C Model Setup 'Gra'
-Slack : -2.569
-TNS   : -8.530
+Slack : -2.897
+TNS   : -7.345
 
 Type  : Slow 1200mV 85C Model Setup 'RAMenable'
-Slack : -1.811
-TNS   : -58.162
-
-Type  : Slow 1200mV 85C Model Hold 'BAout'
-Slack : -0.445
-TNS   : -0.611
+Slack : -2.637
+TNS   : -2.887
 
 Type  : Slow 1200mV 85C Model Hold 'Gra'
-Slack : 0.016
-TNS   : 0.000
+Slack : -1.376
+TNS   : -2.699
 
-Type  : Slow 1200mV 85C Model Hold 'RAMenable'
-Slack : 0.251
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Hold 'BAout'
+Slack : -0.815
+TNS   : -2.970
 
 Type  : Slow 1200mV 85C Model Hold 'aluControl[0]'
-Slack : 0.341
+Slack : -0.352
+TNS   : -4.413
+
+Type  : Slow 1200mV 85C Model Hold 'RAMenable'
+Slack : 0.244
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
@@ -44,11 +44,11 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -252.348
+TNS   : -681.174
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RAMenable'
 Slack : -3.000
-TNS   : -85.612
+TNS   : -10.522
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BAout'
 Slack : -3.000
@@ -63,52 +63,52 @@ Slack : -3.000
 TNS   : -3.000
 
 Type  : Slow 1200mV 0C Model Setup 'aluControl[0]'
-Slack : -121.198
-TNS   : -5967.014
-
-Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -4.633
-TNS   : -826.764
+Slack : -117.923
+TNS   : -5847.637
 
 Type  : Slow 1200mV 0C Model Setup 'BAout'
-Slack : -4.056
-TNS   : -101.481
+Slack : -7.466
+TNS   : -209.833
+
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -4.547
+TNS   : -2482.697
 
 Type  : Slow 1200mV 0C Model Setup 'Gra'
-Slack : -2.226
-TNS   : -7.350
+Slack : -2.524
+TNS   : -6.389
 
 Type  : Slow 1200mV 0C Model Setup 'RAMenable'
-Slack : -1.533
-TNS   : -49.046
-
-Type  : Slow 1200mV 0C Model Hold 'BAout'
-Slack : -0.316
-TNS   : -0.398
+Slack : -2.273
+TNS   : -2.415
 
 Type  : Slow 1200mV 0C Model Hold 'Gra'
-Slack : 0.014
-TNS   : 0.000
+Slack : -1.162
+TNS   : -2.296
 
-Type  : Slow 1200mV 0C Model Hold 'RAMenable'
-Slack : 0.248
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Hold 'BAout'
+Slack : -0.717
+TNS   : -2.543
 
 Type  : Slow 1200mV 0C Model Hold 'aluControl[0]'
-Slack : 0.305
+Slack : -0.262
+TNS   : -2.392
+
+Type  : Slow 1200mV 0C Model Hold 'RAMenable'
+Slack : 0.243
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.311
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -252.348
+TNS   : -681.174
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RAMenable'
 Slack : -3.000
-TNS   : -85.612
+TNS   : -10.522
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BAout'
 Slack : -3.000
@@ -123,63 +123,63 @@ Slack : -3.000
 TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'aluControl[0]'
-Slack : -79.337
-TNS   : -3897.163
-
-Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -3.274
-TNS   : -585.957
+Slack : -77.143
+TNS   : -3814.414
 
 Type  : Fast 1200mV 0C Model Setup 'BAout'
-Slack : -2.193
-TNS   : -49.815
+Slack : -4.549
+TNS   : -125.170
+
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -3.176
+TNS   : -1718.111
 
 Type  : Fast 1200mV 0C Model Setup 'Gra'
-Slack : -0.995
-TNS   : -2.909
+Slack : -1.172
+TNS   : -2.303
 
 Type  : Fast 1200mV 0C Model Setup 'RAMenable'
-Slack : -0.363
-TNS   : -11.598
-
-Type  : Fast 1200mV 0C Model Hold 'BAout'
-Slack : -0.451
-TNS   : -1.403
+Slack : -0.842
+TNS   : -0.842
 
 Type  : Fast 1200mV 0C Model Hold 'Gra'
-Slack : -0.002
-TNS   : -0.002
+Slack : -0.873
+TNS   : -1.719
+
+Type  : Fast 1200mV 0C Model Hold 'BAout'
+Slack : -0.667
+TNS   : -3.933
 
 Type  : Fast 1200mV 0C Model Hold 'aluControl[0]'
-Slack : 0.079
-TNS   : 0.000
+Slack : -0.329
+TNS   : -7.891
 
 Type  : Fast 1200mV 0C Model Hold 'RAMenable'
-Slack : 0.099
+Slack : 0.096
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.187
+Slack : 0.188
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -267.350
+TNS   : -731.811
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RAMenable'
 Slack : -3.000
-TNS   : -45.579
+TNS   : -7.418
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BAout'
 Slack : -3.000
-TNS   : -8.484
+TNS   : -4.463
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'aluControl[0]'
 Slack : -3.000
-TNS   : -3.546
+TNS   : -3.037
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Gra'
 Slack : -3.000
-TNS   : -3.000
+TNS   : -3.011
 
 ------------------------------------------------------------

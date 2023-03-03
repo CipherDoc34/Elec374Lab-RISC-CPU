@@ -1,7 +1,7 @@
 module MDR(
 	input clear, clock, MDRIn, 
-	input [31:0]BusMuxOut, 
-	input [31:0]MDatain,
+	input wire [31:0]BusMuxOut, 
+	input wire [31:0]MDatain,
 	input Read,
 	output wire [31:0]BusMuxInMDR
 );

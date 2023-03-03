@@ -2,7 +2,6 @@ module ALU(
 	input [31:0]YMuxOut, 
 	input [31:0]BusMuxOut, 
 	input [4:0]ALUControl,
-	input ALUin,
 	output wire [63:0]ZMuxIn
 );
 reg [31:0]A;
@@ -16,7 +15,7 @@ lookaheadadder addSub(A,B,ALUControl[2],lookaheadOut);
 BoothAlgorithm mul(A, B, boothOutput);
 NonRestoringDivision div(A, B, Q, R);
 
-always @ (ALUin) begin
+always @ (*) begin
 	A = YMuxOut;
 	B = BusMuxOut;
 	/*
