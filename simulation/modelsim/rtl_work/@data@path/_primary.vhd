@@ -27,8 +27,11 @@ entity DataPath is
         ZMuxEnbale      : in     vl_logic;
         ZSelect         : in     vl_logic;
         ZMuxOut         : in     vl_logic;
+        OutPortenable   : in     vl_logic;
+        PortInout       : in     vl_logic;
+        R15inC          : in     vl_logic;
         aluControl      : in     vl_logic_vector(4 downto 0);
         Yin             : in     vl_logic;
-        DummyOut        : out    vl_logic_vector(31 downto 0)
+        conOut          : out    vl_logic
     );
 end DataPath;

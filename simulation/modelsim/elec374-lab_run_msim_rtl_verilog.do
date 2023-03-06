@@ -24,12 +24,14 @@ vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/1
 vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/se.v}
 vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/reg0.v}
 vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/conff.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/InPort.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/OutPort.v}
 
-vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/load_tb.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/branch_tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  load_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  branch_tb
 
 add wave *
 view structure
 view signals
-run 10 ns
+run 100 ns

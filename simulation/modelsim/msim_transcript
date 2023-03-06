@@ -126,23 +126,37 @@
 # 
 # Top level modules:
 # 	conFF
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/load_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/InPort.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module load_tb
+# -- Compiling module InPort
 # 
 # Top level modules:
-# 	load_tb
+# 	InPort
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/OutPort.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module OutPort
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  load_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps load_tb 
-# Loading work.load_tb
+# Top level modules:
+# 	OutPort
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/branch_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module branch_tb
+# 
+# Top level modules:
+# 	branch_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  branch_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps branch_tb 
+# Loading work.branch_tb
 # Loading work.DataPath
 # Loading work.reg0
 # Loading work.register
 # Loading work.pc
 # Loading work.MDR
 # Loading work.RAM
+# Loading work.InPort
+# Loading work.OutPort
 # Loading work.ALU
 # Loading work.lookaheadadder
 # Loading work.ThirtyTwoBitAdder
@@ -158,32 +172,32 @@
 # Loading work.Bus
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst/b2v_inst6
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst/b2v_inst6
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst4
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst4
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Missing connection for port 'c4'.
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst5/b2v_inst6
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst5/b2v_inst6
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst6/b2v_inst6
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst6/b2v_inst6
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst7/b2v_inst6
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst7/b2v_inst6
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Too few port connections. Expected 15, found 8.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst4
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst4
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'P2'.
 # 
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'G2'.
@@ -200,48 +214,592 @@
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst/b2v_inst6
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst/b2v_inst6
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst4
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst4
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Missing connection for port 'c4'.
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst5/b2v_inst6
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst5/b2v_inst6
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst6/b2v_inst6
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst6/b2v_inst6
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
 # 
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
 # 
-#         Region: /load_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst7/b2v_inst6
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst7/b2v_inst6
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
 # 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(92): [PCDPC] - Port size (17 or 17) does not match connection size (16) for port 'in'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/se.v(5).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(72): [PCDPC] - Port size (32 or 32) does not match connection size (64) for port 'BusMuxOut'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/ZMux.v(5).
 # 
-#         Region: /load_tb/DP/SelectAndEncode
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(92): [PCDPC] - Port size (17 or 17) does not match connection size (16) for port 'out'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/se.v(6).
+#         Region: /branch_tb/DP/ZMUX
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(80): [PCDPC] - Port size (17 or 17) does not match connection size (16) for port 'in'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/se.v(5).
 # 
-#         Region: /load_tb/DP/SelectAndEncode
+#         Region: /branch_tb/DP/SelectAndEncode
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(80): [PCDPC] - Port size (17 or 17) does not match connection size (16) for port 'out'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/se.v(6).
+# 
+#         Region: /branch_tb/DP/SelectAndEncode
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(89): [PCDPC] - Port size (32 or 32) does not match connection size (64) for port 'BusMuxInZMux'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/Bus.v(5).
+# 
+#         Region: /branch_tb/DP/bus
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Keshav  Hostname: SHITBOX420  ProcessID: 3212
 # 
-#           Attempting to use alternate WLF file "./wlftcf05nv".
+#           Attempting to use alternate WLF file "./wlftwhqcfy".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftcf05nv
+#           Using alternate file: ./wlftwhqcfy
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 10 ns
+# run 100 ns
+do elec374-lab_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/BoothsAlgorithm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BoothAlgorithm
+# 
+# Top level modules:
+# 	BoothAlgorithm
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/BCell.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BCell
+# 
+# Top level modules:
+# 	BCell
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ThirtyTwoBitAdder
+# 
+# Top level modules:
+# 	ThirtyTwoBitAdder
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SixteenBitAdder
+# 
+# Top level modules:
+# 	SixteenBitAdder
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FourBitAdder
+# 
+# Top level modules:
+# 	FourBitAdder
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/carrylookaheadlogic.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module carrylookaheadlogic
+# 
+# Top level modules:
+# 	carrylookaheadlogic
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/register.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/DataPath.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DataPath
+# 
+# Top level modules:
+# 	DataPath
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/MDR.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MDR
+# 
+# Top level modules:
+# 	MDR
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/Bus.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Bus
+# 
+# Top level modules:
+# 	Bus
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ZMux.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ZMux
+# 
+# Top level modules:
+# 	ZMux
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/lookaheadadder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module lookaheadadder
+# 
+# Top level modules:
+# 	lookaheadadder
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/NonRestoringDivision.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module NonRestoringDivision
+# ** Warning: C:/altera/13.0sp1/elec374-Lab/NonRestoringDivision.v(12): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	NonRestoringDivision
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/pc.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pc
+# 
+# Top level modules:
+# 	pc
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RAM
+# 
+# Top level modules:
+# 	RAM
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/se.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SE
+# 
+# Top level modules:
+# 	SE
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/reg0.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module reg0
+# 
+# Top level modules:
+# 	reg0
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/conff.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module conFF
+# 
+# Top level modules:
+# 	conFF
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/InPort.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module InPort
+# 
+# Top level modules:
+# 	InPort
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/OutPort.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module OutPort
+# 
+# Top level modules:
+# 	OutPort
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/branch_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module branch_tb
+# 
+# Top level modules:
+# 	branch_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  branch_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps branch_tb 
+# Loading work.branch_tb
+# Loading work.DataPath
+# Loading work.reg0
+# Loading work.register
+# Loading work.pc
+# Loading work.MDR
+# Loading work.RAM
+# Loading work.InPort
+# Loading work.OutPort
+# Loading work.ALU
+# Loading work.lookaheadadder
+# Loading work.ThirtyTwoBitAdder
+# Loading work.SixteenBitAdder
+# Loading work.FourBitAdder
+# Loading work.BCell
+# Loading work.carrylookaheadlogic
+# Loading work.BoothAlgorithm
+# Loading work.NonRestoringDivision
+# Loading work.ZMux
+# Loading work.conFF
+# Loading work.SE
+# Loading work.Bus
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst4
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst5/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst6/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst7/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Too few port connections. Expected 15, found 8.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst4
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'P2'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'G2'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'P3'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'G3'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'c2'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'c3'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst4
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst5/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst6/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst7/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(72): [PCDPC] - Port size (32 or 32) does not match connection size (64) for port 'BusMuxOut'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/ZMux.v(5).
+# 
+#         Region: /branch_tb/DP/ZMUX
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(80): [PCDPC] - Port size (17 or 17) does not match connection size (16) for port 'in'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/se.v(5).
+# 
+#         Region: /branch_tb/DP/SelectAndEncode
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(80): [PCDPC] - Port size (17 or 17) does not match connection size (16) for port 'out'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/se.v(6).
+# 
+#         Region: /branch_tb/DP/SelectAndEncode
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(89): [PCDPC] - Port size (32 or 32) does not match connection size (64) for port 'BusMuxInZMux'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/Bus.v(5).
+# 
+#         Region: /branch_tb/DP/bus
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Keshav  Hostname: SHITBOX420  ProcessID: 3212
+# 
+#           Attempting to use alternate WLF file "./wlfthy0e9a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlfthy0e9a
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ns
+run 20ns
+
+run 20ns
+do elec374-lab_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/BoothsAlgorithm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BoothAlgorithm
+# 
+# Top level modules:
+# 	BoothAlgorithm
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/BCell.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BCell
+# 
+# Top level modules:
+# 	BCell
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ThirtyTwoBitAdder
+# 
+# Top level modules:
+# 	ThirtyTwoBitAdder
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SixteenBitAdder
+# 
+# Top level modules:
+# 	SixteenBitAdder
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FourBitAdder
+# 
+# Top level modules:
+# 	FourBitAdder
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/carrylookaheadlogic.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module carrylookaheadlogic
+# 
+# Top level modules:
+# 	carrylookaheadlogic
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/register.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/DataPath.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DataPath
+# 
+# Top level modules:
+# 	DataPath
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/MDR.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MDR
+# 
+# Top level modules:
+# 	MDR
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/Bus.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Bus
+# 
+# Top level modules:
+# 	Bus
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ZMux.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ZMux
+# 
+# Top level modules:
+# 	ZMux
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/lookaheadadder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module lookaheadadder
+# 
+# Top level modules:
+# 	lookaheadadder
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/NonRestoringDivision.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module NonRestoringDivision
+# ** Warning: C:/altera/13.0sp1/elec374-Lab/NonRestoringDivision.v(12): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	NonRestoringDivision
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/pc.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pc
+# 
+# Top level modules:
+# 	pc
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RAM
+# 
+# Top level modules:
+# 	RAM
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/se.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SE
+# 
+# Top level modules:
+# 	SE
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/reg0.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module reg0
+# 
+# Top level modules:
+# 	reg0
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/conff.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module conFF
+# 
+# Top level modules:
+# 	conFF
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/InPort.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module InPort
+# 
+# Top level modules:
+# 	InPort
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/OutPort.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module OutPort
+# 
+# Top level modules:
+# 	OutPort
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374-Lab {C:/altera/13.0sp1/elec374-Lab/branch_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module branch_tb
+# 
+# Top level modules:
+# 	branch_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  branch_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps branch_tb 
+# Loading work.branch_tb
+# Loading work.DataPath
+# Loading work.reg0
+# Loading work.register
+# Loading work.pc
+# Loading work.MDR
+# Loading work.RAM
+# Loading work.InPort
+# Loading work.OutPort
+# Loading work.ALU
+# Loading work.lookaheadadder
+# Loading work.ThirtyTwoBitAdder
+# Loading work.SixteenBitAdder
+# Loading work.FourBitAdder
+# Loading work.BCell
+# Loading work.carrylookaheadlogic
+# Loading work.BoothAlgorithm
+# Loading work.NonRestoringDivision
+# Loading work.ZMux
+# Loading work.conFF
+# Loading work.SE
+# Loading work.Bus
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst4
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst5/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst6/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst/b2v_inst7/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Too few port connections. Expected 15, found 8.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst4
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'P2'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'G2'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'P3'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'G3'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'c2'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'c3'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/ThirtyTwoBitAdder.v(74): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst4
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/SixteenBitAdder.v(78): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst5/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst6/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Too few port connections. Expected 15, found 14.
+# 
+#         Region: /branch_tb/DP/alu/addSub/ThirtyTwoBitAdder_inst/b2v_inst5/b2v_inst7/b2v_inst6
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374-Lab/FourBitAdder.v(105): [TFMPC] - Missing connection for port 'c4'.
+# 
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(72): [PCDPC] - Port size (32 or 32) does not match connection size (64) for port 'BusMuxOut'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/ZMux.v(5).
+# 
+#         Region: /branch_tb/DP/ZMUX
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(80): [PCDPC] - Port size (17 or 17) does not match connection size (16) for port 'in'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/se.v(5).
+# 
+#         Region: /branch_tb/DP/SelectAndEncode
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(80): [PCDPC] - Port size (17 or 17) does not match connection size (16) for port 'out'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/se.v(6).
+# 
+#         Region: /branch_tb/DP/SelectAndEncode
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374-Lab/DataPath.v(89): [PCDPC] - Port size (32 or 32) does not match connection size (64) for port 'BusMuxInZMux'. The port definition is at: C:/altera/13.0sp1/elec374-Lab/Bus.v(5).
+# 
+#         Region: /branch_tb/DP/bus
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Keshav  Hostname: SHITBOX420  ProcessID: 3212
+# 
+#           Attempting to use alternate WLF file "./wlftaw5bb9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftaw5bb9
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ns
+run 20ns
+run 20ns
+
+run 20ns
+
+run 20ns
+
+
+run 20ns
