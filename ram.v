@@ -8,7 +8,10 @@ reg [DATA_WIDTH-1:0] memory [(2**ADDR_SPACE)-1:0];
 integer i;
 
 initial begin
-		memory[0] = 32'h9B180019;
+		memory[0] = 32'h00800075;
+		memory[5] = 32'h69;
+		memory['h75] = 32'd2;
+		memory[72] = 32'd234;
 	//for (i = 6; i < 2**ADDR_SPACE; i = i+1)
 		//memory[i] <= {DATA_WIDTH{1'b1}};
 end

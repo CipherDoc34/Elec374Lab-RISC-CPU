@@ -1,13 +1,5 @@
 module DataPath(
-	input PCout, IncPC, ZLOout, ZLOin, CSignout, MDRout, RAMenable,
-			MARin, PCin, MDRin, IRin,
-			Gra, Grb, Grc, Rin, Rout, BAout,
-			clock, read, write, clear, conin,
-			ZMuxEnbale, ZSelect, ZMuxOut,
-			OutPortenable, PortInout, R15inC,
-	input [4:0] aluControl,
-	input Yin,
-	output conOut
+	input	clock, reset
 );
 
 wire [31:0] BusMuxOut; 
@@ -22,9 +14,12 @@ wire [31:0] BusMuxInY;
 wire [31:0] BusMuxInHI, BusMuxInLO;
 wire [63:0] ZMuxIn, BusMuxInZMux;
 wire [8:0] MARaddrOut;
+wire [4:0] aluControl;
 wire [31:0] OutportData;
-wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
+wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out, HIout, LOout,
      R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in, R15inS;
+wire PCout, PCin, IncPC, IRin,Zin, ZLOout, ZHIout, CSignout, RAMenable, MDRout, MARin, MDRin, Gra, Grb, Grc, Rin, Rout, BAout,
+	  read, write, clear, conin, ZMuxEnable, ZSelect, ZMuxOut, OutPortenable, PortInout, R15inC, Yin, conOut;
 assign R15in = R15inS | R15inC;
 
 //General Purpose Registers
@@ -48,13 +43,14 @@ register R15(clear, clock, R15in, BusMuxOut, BusMuxInR15);
 defparam R1.INIT = 32'd3;
 defparam R2.INIT = 32'd93;
 defparam R3.INIT = 32'd9;
+defparam R4.INIT = 32'h69;
 defparam R6.INIT = 32'd0;
 
 //registers
 register HI(clear, clock, HIin, BusMuxOut, BusMuxInHI);
 register LO(clear, clock, LOin, BusMuxOut, BusMuxInLO);
-register ZHI(clear, clock, ZHIin, BusMuxOut, BusMuxInZHI);
-register ZLO(clear, clock, ZLOin, BusMuxOut, BusMuxInZLO);
+register ZHI(clear, clock, Zin, ZMuxIn[63:32], BusMuxInZHI);
+register ZLO(clear, clock, Zin, ZMuxIn[31:0], BusMuxInZLO);
 pc PC(clear, clock, PCin, IncPC, BusMuxOut, BusMuxInPC);
 register IR(clear, clock, IRin, BusMuxOut, IRout);
 register Y(clear, clock, Yin, BusMuxOut, BusMuxInY);
@@ -69,7 +65,7 @@ OutPort OutPort(clear, clock, OutPortenable, BusMuxOut, OutportData);
 
 //register CSign(clear, clock, CSignIn, BusMuxOut, BusMuxInCSign);
 ALU alu(BusMuxInY, BusMuxOut, aluControl, ZMuxIn);
-ZMux ZMUX(ZMuxIn, ZSelect, ZMuxEnbale, BusMuxInZMux);
+ZMux ZMUX(ZMuxIn, ZSelect, ZMuxEnable, BusMuxInZMux);
 conFF CONFF(conin, BusMuxOut, IRout, conOut);
 
 //Select and Encode
@@ -83,8 +79,15 @@ SE SelectAndEncode(Gra, Grb, Grc, Rin, Rout, BAout, IRout,
 Bus bus(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7,
 	BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15,
 	BusMuxInHI, BusMuxInLO, BusMuxInZHI, BusMuxInZLO, BusMuxInZMux, BusMuxInPC, BusMuxInMDR, BusMuxInPortIn, BusMuxInCSign,
+	HIout, LOout,
 	R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, 
 	R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
 	HIout, LOout, ZHIout, ZLOout, ZMuxOut, PCout, MDRout, PortInout, CSignout,
 	S0, S1, S2, S3, S4, BusMuxOut);
+
+//Control Unit
+ControlUnit CPU(PCout, PCin, IncPC, IRin,Zin, ZLOout, ZHIout, CSignout, aluControl,
+					 RAMenable, MDRout, MARin, MDRin, Gra, Grb, Grc, Rin, Rout, BAout,
+					 read, write, clear, conin, ZMuxEnable, ZSelect, ZMuxOut,
+					 OutPortenable, PortInout, R15inC, Yin, IRout, HIout, HIin, LOout, LOin, conOut, clock, reset);
 endmodule

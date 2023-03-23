@@ -1,5 +1,5 @@
 Flow report for elec374-lab
-Mon Mar 06 18:11:01 2023
+Thu Mar 23 16:34:11 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Mar 06 18:11:01 2023           ;
+; Flow Status                        ; Successful - Thu Mar 23 16:34:11 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; elec374-lab                                     ;
 ; Top-level Entity Name              ; DataPath                                        ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/06/2023 18:11:00 ;
+; Start date & time ; 03/23/2023 16:34:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; elec374-lab         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 171720539336436.167814426021296       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 171720539336436.167960365109540       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; datapath_tb    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; load_tb        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; loadI_tb       ;
@@ -84,7 +84,13 @@ applicable agreement for further details.
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; jr_tb          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; jal_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; branch_tb      ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; branch_tb                             ; --            ; --          ; eda_simulation ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; store_tb       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mfhi_tb        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mflo_tb        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; inPort_tb      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; outPort_tb     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; CU_tb          ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; CU_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
@@ -96,6 +102,12 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; jr_tb.v                               ; --            ; --          ; jr_tb          ;
 ; EDA_TEST_BENCH_FILE                  ; jal_tb.v                              ; --            ; --          ; jal_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; branch_tb.v                           ; --            ; --          ; branch_tb      ;
+; EDA_TEST_BENCH_FILE                  ; store_tb.v                            ; --            ; --          ; store_tb       ;
+; EDA_TEST_BENCH_FILE                  ; mfhi_tb.v                             ; --            ; --          ; mfhi_tb        ;
+; EDA_TEST_BENCH_FILE                  ; mflo_tb.v                             ; --            ; --          ; mflo_tb        ;
+; EDA_TEST_BENCH_FILE                  ; inPort_tb.v                           ; --            ; --          ; inPort_tb      ;
+; EDA_TEST_BENCH_FILE                  ; outPort_tb.v                          ; --            ; --          ; outPort_tb     ;
+; EDA_TEST_BENCH_FILE                  ; CU_tb.v                               ; --            ; --          ; CU_tb          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; datapath_tb                           ; --            ; --          ; datapath_tb    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; load_tb                               ; --            ; --          ; load_tb        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; loadI_tb                              ; --            ; --          ; loadI_tb       ;
@@ -104,6 +116,12 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_MODULE_NAME           ; jr_tb                                 ; --            ; --          ; jr_tb          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; jal_tb                                ; --            ; --          ; jal_tb         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; branch_tb                             ; --            ; --          ; branch_tb      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; store_tb                              ; --            ; --          ; store_tb       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mfhi_tb                               ; --            ; --          ; mfhi_tb        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mflo_tb                               ; --            ; --          ; mflo_tb        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; inPort_tb                             ; --            ; --          ; inPort_tb      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; outPort_tb                            ; --            ; --          ; outPort_tb     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; CU_tb                                 ; --            ; --          ; CU_tb          ;
 ; EDA_TEST_BENCH_NAME                  ; datapath_tb                           ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; load_tb                               ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; loadI_tb                              ; --            ; --          ; eda_simulation ;
@@ -112,14 +130,26 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_NAME                  ; jr_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; jal_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; branch_tb                             ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; store_tb                              ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; mfhi_tb                               ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; mflo_tb                               ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; inPort_tb                             ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; outPort_tb                            ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; CU_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 600 ns                                ; --            ; --          ; datapath_tb    ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 10 ns                                 ; --            ; --          ; load_tb        ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 140 ns                                ; --            ; --          ; loadI_tb       ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 140 ns                                ; --            ; --          ; andI_tb        ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 140 s                                 ; --            ; --          ; orI_tb         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --          ; jr_tb          ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 120 ns                                ; --            ; --          ; jal_tb         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --          ; branch_tb      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 160 ns                                ; --            ; --          ; load_tb        ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 160 ns                                ; --            ; --          ; loadI_tb       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 160 ns                                ; --            ; --          ; andI_tb        ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 160 ns                                ; --            ; --          ; orI_tb         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 160 ns                                ; --            ; --          ; jr_tb          ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 160 ns                                ; --            ; --          ; jal_tb         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 160 ns                                ; --            ; --          ; branch_tb      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 160 ns                                ; --            ; --          ; store_tb       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --          ; mfhi_tb        ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --          ; mflo_tb        ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --          ; inPort_tb      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --          ; outPort_tb     ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --          ; CU_tb          ;
 ; EDA_TIME_SCALE                       ; 100 us                                ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
@@ -139,8 +169,8 @@ applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:02     ; 1.0                     ; 4586 MB             ; 00:00:01                           ;
-; Total                  ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Elaboration ; 00:00:01     ; 1.0                     ; 4586 MB             ; 00:00:01                           ;
+; Total                  ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

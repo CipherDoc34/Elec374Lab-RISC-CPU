@@ -1,5 +1,5 @@
 Analysis & Elaboration report for elec374-lab
-Mon Mar 06 18:11:01 2023
+Thu Mar 23 16:34:11 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,17 +36,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  28. Parameter Settings for User Entity Instance: RAM:RAM
  29. Parameter Settings for User Entity Instance: InPort:InPort
  30. Parameter Settings for User Entity Instance: OutPort:OutPort
- 31. Analysis & Elaboration Settings
- 32. Port Connectivity Checks: "Bus:bus"
- 33. Port Connectivity Checks: "SE:SelectAndEncode"
- 34. Port Connectivity Checks: "ZMux:ZMUX"
- 35. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|carrylookaheadlogic:b2v_inst4"
- 36. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|carrylookaheadlogic:b2v_inst4"
- 37. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|FourBitAdder:b2v_inst|carrylookaheadlogic:b2v_inst6"
- 38. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst"
- 39. Port Connectivity Checks: "OutPort:OutPort"
- 40. Analysis & Elaboration Messages
- 41. Analysis & Elaboration Suppressed Messages
+ 31. Parameter Settings for User Entity Instance: ControlUnit:CPU
+ 32. Analysis & Elaboration Settings
+ 33. Port Connectivity Checks: "Bus:bus"
+ 34. Port Connectivity Checks: "SE:SelectAndEncode"
+ 35. Port Connectivity Checks: "ZMux:ZMUX"
+ 36. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|carrylookaheadlogic:b2v_inst4"
+ 37. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|carrylookaheadlogic:b2v_inst4"
+ 38. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst|FourBitAdder:b2v_inst|carrylookaheadlogic:b2v_inst6"
+ 39. Port Connectivity Checks: "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst"
+ 40. Port Connectivity Checks: "ALU:alu"
+ 41. Port Connectivity Checks: "OutPort:OutPort"
+ 42. Analysis & Elaboration Messages
+ 43. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -72,7 +74,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Mar 06 18:11:01 2023           ;
+; Analysis & Elaboration Status      ; Successful - Thu Mar 23 16:34:11 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; elec374-lab                                     ;
 ; Top-level Entity Name              ; DataPath                                        ;
@@ -155,7 +157,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------------------------------+-----------------+
 ; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
 ; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
+; INIT           ; 00000000000000000000000001101001 ; Unsigned Binary ;
 +----------------+----------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -421,6 +423,81 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ControlUnit:CPU ;
++----------------+--------+------------------------------------+
+; Parameter Name ; Value  ; Type                               ;
++----------------+--------+------------------------------------+
+; Reset_state    ; 000000 ; Unsigned Binary                    ;
+; T0             ; 000001 ; Unsigned Binary                    ;
+; T1             ; 000010 ; Unsigned Binary                    ;
+; T2             ; 000011 ; Unsigned Binary                    ;
+; ld3            ; 000100 ; Unsigned Binary                    ;
+; ld4            ; 000101 ; Unsigned Binary                    ;
+; ld5            ; 000110 ; Unsigned Binary                    ;
+; ld6            ; 000111 ; Unsigned Binary                    ;
+; ld7            ; 001000 ; Unsigned Binary                    ;
+; ldi3           ; 001001 ; Unsigned Binary                    ;
+; ldi4           ; 001010 ; Unsigned Binary                    ;
+; ldi5           ; 001011 ; Unsigned Binary                    ;
+; st3            ; 001100 ; Unsigned Binary                    ;
+; st4            ; 001101 ; Unsigned Binary                    ;
+; st5            ; 001110 ; Unsigned Binary                    ;
+; st6            ; 001111 ; Unsigned Binary                    ;
+; st7            ; 010000 ; Unsigned Binary                    ;
+; ALUi3          ; 010001 ; Unsigned Binary                    ;
+; ALUi4          ; 010010 ; Unsigned Binary                    ;
+; ALUi5          ; 010011 ; Unsigned Binary                    ;
+; ALU3           ; 010100 ; Unsigned Binary                    ;
+; ALU4           ; 010101 ; Unsigned Binary                    ;
+; ALU5           ; 010110 ; Unsigned Binary                    ;
+; MULDIV6        ; 010111 ; Unsigned Binary                    ;
+; br3            ; 011000 ; Unsigned Binary                    ;
+; br4            ; 011001 ; Unsigned Binary                    ;
+; br5            ; 011010 ; Unsigned Binary                    ;
+; br6            ; 011011 ; Unsigned Binary                    ;
+; jr3            ; 011100 ; Unsigned Binary                    ;
+; jal3           ; 011101 ; Unsigned Binary                    ;
+; jal4           ; 011110 ; Unsigned Binary                    ;
+; in3            ; 011111 ; Unsigned Binary                    ;
+; out3           ; 100000 ; Unsigned Binary                    ;
+; mfhi3          ; 100001 ; Unsigned Binary                    ;
+; mflo3          ; 100010 ; Unsigned Binary                    ;
+; halt3          ; 100011 ; Unsigned Binary                    ;
+; nop3           ; 100100 ; Unsigned Binary                    ;
+; ALUadd         ; 00011  ; Unsigned Binary                    ;
+; ld             ; 00000  ; Unsigned Binary                    ;
+; ldi            ; 00001  ; Unsigned Binary                    ;
+; st             ; 00010  ; Unsigned Binary                    ;
+; add            ; 00011  ; Unsigned Binary                    ;
+; sub            ; 00100  ; Unsigned Binary                    ;
+; ANDop          ; 00101  ; Unsigned Binary                    ;
+; ORop           ; 00110  ; Unsigned Binary                    ;
+; shr            ; 00111  ; Unsigned Binary                    ;
+; shra           ; 01000  ; Unsigned Binary                    ;
+; shl            ; 01001  ; Unsigned Binary                    ;
+; ror            ; 01010  ; Unsigned Binary                    ;
+; rol            ; 01011  ; Unsigned Binary                    ;
+; mul            ; 01111  ; Unsigned Binary                    ;
+; div            ; 10000  ; Unsigned Binary                    ;
+; neg            ; 10001  ; Unsigned Binary                    ;
+; NOTop          ; 10010  ; Unsigned Binary                    ;
+; addi           ; 01100  ; Unsigned Binary                    ;
+; andi           ; 01101  ; Unsigned Binary                    ;
+; ori            ; 01110  ; Unsigned Binary                    ;
+; br             ; 10011  ; Unsigned Binary                    ;
+; jr             ; 10100  ; Unsigned Binary                    ;
+; jal            ; 10101  ; Unsigned Binary                    ;
+; in             ; 10110  ; Unsigned Binary                    ;
+; out            ; 10111  ; Unsigned Binary                    ;
+; mfhi           ; 11000  ; Unsigned Binary                    ;
+; mflo           ; 11001  ; Unsigned Binary                    ;
+; nop            ; 11010  ; Unsigned Binary                    ;
+; halt           ; 11011  ; Unsigned Binary                    ;
++----------------+--------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -584,6 +661,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu"                                                                                                                                                ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                            ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; ALUControl ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "ALUControl[4..1]" will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "OutPort:OutPort"                                                                       ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -599,7 +685,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 06 18:10:59 2023
+    Info: Processing started: Thu Mar 23 16:34:10 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off elec374-lab -c elec374-lab --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file boothsalgorithm.v
@@ -668,17 +754,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file inport_
     Info (12023): Found entity 1: inPort_tb
 Info (12021): Found 1 design units, including 1 entities, in source file branch_tb.v
     Info (12023): Found entity 1: branch_tb
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(54): created implicit net for "HIin"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(55): created implicit net for "LOin"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(56): created implicit net for "ZHIin"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(88): created implicit net for "HIout"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(88): created implicit net for "LOout"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(88): created implicit net for "ZHIout"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S0"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S1"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S2"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S3"
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "S4"
+Info (12021): Found 1 design units, including 1 entities, in source file store_tb.v
+    Info (12023): Found entity 1: store_tb
+Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
+    Info (12023): Found entity 1: ControlUnit
+Info (12021): Found 1 design units, including 1 entities, in source file cu_tb.v
+    Info (12023): Found entity 1: CU_tb
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(49): created implicit net for "HIin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(50): created implicit net for "LOin"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(66): created implicit net for "aluControl"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(83): created implicit net for "HIout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(83): created implicit net for "LOout"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "S0"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "S1"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "S2"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "S3"
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(84): created implicit net for "S4"
 Warning (10236): Verilog HDL Implicit Net warning at lookaheadadder.v(20): created implicit net for "g"
 Warning (10236): Verilog HDL Implicit Net warning at lookaheadadder.v(21): created implicit net for "p"
 Info (12127): Elaborating entity "DataPath" for the top level hierarchy
@@ -687,81 +778,17 @@ Info (12128): Elaborating entity "register" for hierarchy "reg0:R0|register:R0"
 Info (12128): Elaborating entity "register" for hierarchy "register:R1"
 Info (12128): Elaborating entity "register" for hierarchy "register:R2"
 Info (12128): Elaborating entity "register" for hierarchy "register:R3"
+Info (12128): Elaborating entity "register" for hierarchy "register:R4"
 Info (12128): Elaborating entity "pc" for hierarchy "pc:PC"
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MDR"
 Info (12128): Elaborating entity "register" for hierarchy "register:MAR"
 Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM"
-Info (10264): Verilog HDL Case Statement information at ram.v(18): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at ram.v(21): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "InPort" for hierarchy "InPort:InPort"
 Info (12128): Elaborating entity "OutPort" for hierarchy "OutPort:OutPort"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu"
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(30): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(31): incomplete case statement has no default case item
 Warning (10240): Verilog HDL Always Construct warning at ALU.v(19): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(19): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "C[0]" at ALU.v(19)
-Info (10041): Inferred latch for "C[1]" at ALU.v(19)
-Info (10041): Inferred latch for "C[2]" at ALU.v(19)
-Info (10041): Inferred latch for "C[3]" at ALU.v(19)
-Info (10041): Inferred latch for "C[4]" at ALU.v(19)
-Info (10041): Inferred latch for "C[5]" at ALU.v(19)
-Info (10041): Inferred latch for "C[6]" at ALU.v(19)
-Info (10041): Inferred latch for "C[7]" at ALU.v(19)
-Info (10041): Inferred latch for "C[8]" at ALU.v(19)
-Info (10041): Inferred latch for "C[9]" at ALU.v(19)
-Info (10041): Inferred latch for "C[10]" at ALU.v(19)
-Info (10041): Inferred latch for "C[11]" at ALU.v(19)
-Info (10041): Inferred latch for "C[12]" at ALU.v(19)
-Info (10041): Inferred latch for "C[13]" at ALU.v(19)
-Info (10041): Inferred latch for "C[14]" at ALU.v(19)
-Info (10041): Inferred latch for "C[15]" at ALU.v(19)
-Info (10041): Inferred latch for "C[16]" at ALU.v(19)
-Info (10041): Inferred latch for "C[17]" at ALU.v(19)
-Info (10041): Inferred latch for "C[18]" at ALU.v(19)
-Info (10041): Inferred latch for "C[19]" at ALU.v(19)
-Info (10041): Inferred latch for "C[20]" at ALU.v(19)
-Info (10041): Inferred latch for "C[21]" at ALU.v(19)
-Info (10041): Inferred latch for "C[22]" at ALU.v(19)
-Info (10041): Inferred latch for "C[23]" at ALU.v(19)
-Info (10041): Inferred latch for "C[24]" at ALU.v(19)
-Info (10041): Inferred latch for "C[25]" at ALU.v(19)
-Info (10041): Inferred latch for "C[26]" at ALU.v(19)
-Info (10041): Inferred latch for "C[27]" at ALU.v(19)
-Info (10041): Inferred latch for "C[28]" at ALU.v(19)
-Info (10041): Inferred latch for "C[29]" at ALU.v(19)
-Info (10041): Inferred latch for "C[30]" at ALU.v(19)
-Info (10041): Inferred latch for "C[31]" at ALU.v(19)
-Info (10041): Inferred latch for "C[32]" at ALU.v(19)
-Info (10041): Inferred latch for "C[33]" at ALU.v(19)
-Info (10041): Inferred latch for "C[34]" at ALU.v(19)
-Info (10041): Inferred latch for "C[35]" at ALU.v(19)
-Info (10041): Inferred latch for "C[36]" at ALU.v(19)
-Info (10041): Inferred latch for "C[37]" at ALU.v(19)
-Info (10041): Inferred latch for "C[38]" at ALU.v(19)
-Info (10041): Inferred latch for "C[39]" at ALU.v(19)
-Info (10041): Inferred latch for "C[40]" at ALU.v(19)
-Info (10041): Inferred latch for "C[41]" at ALU.v(19)
-Info (10041): Inferred latch for "C[42]" at ALU.v(19)
-Info (10041): Inferred latch for "C[43]" at ALU.v(19)
-Info (10041): Inferred latch for "C[44]" at ALU.v(19)
-Info (10041): Inferred latch for "C[45]" at ALU.v(19)
-Info (10041): Inferred latch for "C[46]" at ALU.v(19)
-Info (10041): Inferred latch for "C[47]" at ALU.v(19)
-Info (10041): Inferred latch for "C[48]" at ALU.v(19)
-Info (10041): Inferred latch for "C[49]" at ALU.v(19)
-Info (10041): Inferred latch for "C[50]" at ALU.v(19)
-Info (10041): Inferred latch for "C[51]" at ALU.v(19)
-Info (10041): Inferred latch for "C[52]" at ALU.v(19)
-Info (10041): Inferred latch for "C[53]" at ALU.v(19)
-Info (10041): Inferred latch for "C[54]" at ALU.v(19)
-Info (10041): Inferred latch for "C[55]" at ALU.v(19)
-Info (10041): Inferred latch for "C[56]" at ALU.v(19)
-Info (10041): Inferred latch for "C[57]" at ALU.v(19)
-Info (10041): Inferred latch for "C[58]" at ALU.v(19)
-Info (10041): Inferred latch for "C[59]" at ALU.v(19)
-Info (10041): Inferred latch for "C[60]" at ALU.v(19)
-Info (10041): Inferred latch for "C[61]" at ALU.v(19)
-Info (10041): Inferred latch for "C[62]" at ALU.v(19)
-Info (10041): Inferred latch for "C[63]" at ALU.v(19)
 Info (12128): Elaborating entity "lookaheadadder" for hierarchy "ALU:alu|lookaheadadder:addSub"
 Info (12128): Elaborating entity "ThirtyTwoBitAdder" for hierarchy "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst"
 Info (12128): Elaborating entity "SixteenBitAdder" for hierarchy "ALU:alu|lookaheadadder:addSub|ThirtyTwoBitAdder:ThirtyTwoBitAdder_inst|SixteenBitAdder:b2v_inst"
@@ -775,9 +802,6 @@ Warning (10199): Verilog HDL Case Statement warning at BoothsAlgorithm.v(28): ca
 Warning (10230): Verilog HDL assignment warning at BoothsAlgorithm.v(35): truncated value with size 66 to match size of target (64)
 Info (12128): Elaborating entity "NonRestoringDivision" for hierarchy "ALU:alu|NonRestoringDivision:div"
 Info (12128): Elaborating entity "ZMux" for hierarchy "ZMux:ZMUX"
-Warning (10235): Verilog HDL Always Construct warning at ZMux.v(10): variable "ZSelect" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ZMux.v(11): variable "ZMuxIn" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at ZMux.v(14): variable "ZMuxIn" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info (12128): Elaborating entity "conFF" for hierarchy "conFF:CONFF"
 Warning (10036): Verilog HDL or VHDL warning at conff.v(8): object "temp" assigned a value but never read
 Info (12128): Elaborating entity "SE" for hierarchy "SE:SelectAndEncode"
@@ -826,6 +850,78 @@ Info (10041): Inferred latch for "q[28]" at Bus.v(96)
 Info (10041): Inferred latch for "q[29]" at Bus.v(96)
 Info (10041): Inferred latch for "q[30]" at Bus.v(96)
 Info (10041): Inferred latch for "q[31]" at Bus.v(96)
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:CPU"
+Info (10264): Verilog HDL Case Statement information at ControlUnit.v(46): all case item expressions in this case statement are onehot
+Warning (10230): Verilog HDL assignment warning at ControlUnit.v(99): truncated value with size 5 to match size of target (1)
+Warning (10270): Verilog HDL Case Statement warning at ControlUnit.v(72): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at ControlUnit.v(72): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "PCout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "IncPC", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "Zin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "ZLOout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "MDRout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "RAMenable", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "MARin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "PCin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "MDRin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "IRin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "Yin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "Gra", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "Grb", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "Grc", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "Rin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "Rout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "BAout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "read", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "write", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "clear", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "conin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "ZMuxEnable", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "ZSelect", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "ZMuxOut", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "CSignout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "OutPortenable", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "PortInout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "R15inC", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "ZHIout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(71): inferring latch(es) for variable "aluControl", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "aluControl" at ControlUnit.v(71)
+Info (10041): Inferred latch for "next_state.ld7" at ControlUnit.v(71)
+Info (10041): Inferred latch for "next_state.ld6" at ControlUnit.v(71)
+Info (10041): Inferred latch for "next_state.ld5" at ControlUnit.v(71)
+Info (10041): Inferred latch for "next_state.ld4" at ControlUnit.v(71)
+Info (10041): Inferred latch for "next_state.T0" at ControlUnit.v(71)
+Info (10041): Inferred latch for "next_state.000000" at ControlUnit.v(71)
+Info (10041): Inferred latch for "ZHIout" at ControlUnit.v(71)
+Info (10041): Inferred latch for "R15inC" at ControlUnit.v(71)
+Info (10041): Inferred latch for "PortInout" at ControlUnit.v(71)
+Info (10041): Inferred latch for "OutPortenable" at ControlUnit.v(71)
+Info (10041): Inferred latch for "CSignout" at ControlUnit.v(71)
+Info (10041): Inferred latch for "ZMuxOut" at ControlUnit.v(71)
+Info (10041): Inferred latch for "ZSelect" at ControlUnit.v(71)
+Info (10041): Inferred latch for "ZMuxEnable" at ControlUnit.v(71)
+Info (10041): Inferred latch for "conin" at ControlUnit.v(71)
+Info (10041): Inferred latch for "clear" at ControlUnit.v(71)
+Info (10041): Inferred latch for "write" at ControlUnit.v(71)
+Info (10041): Inferred latch for "read" at ControlUnit.v(71)
+Info (10041): Inferred latch for "BAout" at ControlUnit.v(71)
+Info (10041): Inferred latch for "Rout" at ControlUnit.v(71)
+Info (10041): Inferred latch for "Rin" at ControlUnit.v(71)
+Info (10041): Inferred latch for "Grc" at ControlUnit.v(71)
+Info (10041): Inferred latch for "Grb" at ControlUnit.v(71)
+Info (10041): Inferred latch for "Gra" at ControlUnit.v(71)
+Info (10041): Inferred latch for "Yin" at ControlUnit.v(71)
+Info (10041): Inferred latch for "IRin" at ControlUnit.v(71)
+Info (10041): Inferred latch for "MDRin" at ControlUnit.v(71)
+Info (10041): Inferred latch for "PCin" at ControlUnit.v(71)
+Info (10041): Inferred latch for "MARin" at ControlUnit.v(71)
+Info (10041): Inferred latch for "RAMenable" at ControlUnit.v(71)
+Info (10041): Inferred latch for "MDRout" at ControlUnit.v(71)
+Info (10041): Inferred latch for "ZLOout" at ControlUnit.v(71)
+Info (10041): Inferred latch for "Zin" at ControlUnit.v(71)
+Info (10041): Inferred latch for "IncPC" at ControlUnit.v(71)
+Info (10041): Inferred latch for "PCout" at ControlUnit.v(71)
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "BusMuxInZMux[63]" is missing source, defaulting to GND
     Warning (12110): Net "BusMuxInZMux[62]" is missing source, defaulting to GND
@@ -1816,12 +1912,12 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "BusMuxInZMux[34]" is missing source, defaulting to GND
     Warning (12110): Net "BusMuxInZMux[33]" is missing source, defaulting to GND
     Warning (12110): Net "BusMuxInZMux[32]" is missing source, defaulting to GND
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/elec374-Lab/output_files/elec374-lab.map.smsg
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 1024 warnings
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 1052 warnings
     Info: Peak virtual memory: 4586 megabytes
-    Info: Processing ended: Mon Mar 06 18:11:01 2023
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Thu Mar 23 16:34:11 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

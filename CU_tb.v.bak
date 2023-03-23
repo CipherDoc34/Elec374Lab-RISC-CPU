@@ -1,0 +1,3 @@
+`timescale 1np/10ps
+
+module CU_tb();

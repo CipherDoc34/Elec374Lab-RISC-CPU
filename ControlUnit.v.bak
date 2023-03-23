@@ -1,0 +1,11 @@
+module ControlUnit(
+	input PCout, IncPC, ZLOout, ZLOin, CSignout, MDRout, RAMenable,
+			MARin, PCin, MDRin, IRin,
+			Gra, Grb, Grc, Rin, Rout, BAout,
+			clock, read, write, clear, conin,
+			ZMuxEnbale, ZSelect, ZMuxOut,
+			OutPortenable, PortInout, R15inC, ZHIout,
+	input [4:0] aluControl,
+	input Yin,
+	output conOut
+);

@@ -7,7 +7,7 @@ reg MARin, PCin, MDRin, IRin, Yin;
 reg Gra, Grb, Grc, Rin, Rout, BAout;
 reg clock, read, write, clear, conin;
 reg ZMuxEnable, ZSelect, ZMuxOut, ZLOin;
-reg R15in;
+reg R15in, ZHIout;
 wire out;
 reg [4:0] aluControl;
 reg [3:0] present_state;
@@ -18,7 +18,7 @@ DataPath DP(PCout, IncPC, ZLOout, ZLOin, Cout, MDRout, RAMenable,
 				Gra, Grb, Grc, Rin, Rout, BAout,
 				clock, read, write, clear, conin,
 				ZMuxEnable, ZSelect, ZMuxOut,
-				OutPortenable, PortInout, R15in,
+				OutPortenable, PortInout, R15in, ZHIout,
 				aluControl, Yin, out);
 
 parameter init = 4'b0, T0 = 4'd1, T1 = 4'd2, T2 = 4'd3, T3 = 4'd4;
@@ -37,7 +37,7 @@ always @(present_state) begin
 			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
 			clock <= 0; read <= 0; write <= 0; clear <= 0; conin <= 0;
 			ZMuxEnable <= 0; ZSelect <= 0; ZMuxOut <= 0; ZLOin <= 0; Cout <= 0;
-			OutPortenable <= 0; PortInout <= 0; R15in <= 0;
+			OutPortenable <= 0; PortInout <= 0; R15in <= 0; ZHIout <= 0;
 		end
 		T0: begin
 			PCout <= 1; MARin <= 1; IncPC <= 1;
@@ -52,8 +52,8 @@ always @(present_state) begin
 			#15 MDRout <= 0; IRin <= 0;
 		end
 		T3: begin
-			ZMuxEnable <= 1; ZSelect <= 0; ZMuxOut <= 1; Gra <= 1; Rin <= 1;
-			#15 ZMuxEnable <= 0; ZMuxOut <= 0; Gra <= 0; Rin <= 0;
+			ZLOout <= 1; Gra <= 1; Rin <= 1;
+			#15 ZLOout <= 0; Gra <= 0; Rin <= 0;
 		end
 	endcase
 end

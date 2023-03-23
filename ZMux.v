@@ -6,13 +6,15 @@ module ZMux(
 );
 
 reg [31:0]Zout;
-always @ (ZMuxEnable) begin
+always @ (posedge	ZMuxEnable) begin
+if (ZMuxEnable) begin
 	if (ZSelect) begin
 		Zout = ZMuxIn[63:32];
 	end
 	else begin
 		Zout = ZMuxIn[31:0];
 	end
+end
 end
 assign BusMuxOut = Zout;
 endmodule

@@ -18,6 +18,7 @@ NonRestoringDivision div(A, B, Q, R);
 always @ (*) begin
 	A = YMuxOut;
 	B = BusMuxOut;
+	C = 64'd0;
 	/*
 	//add
 	if (ALUControl == 5'b00011) begin
