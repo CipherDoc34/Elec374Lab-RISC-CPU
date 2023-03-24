@@ -40,12 +40,6 @@ register R13(clear, clock, R13in, BusMuxOut, BusMuxInR13);
 register R14(clear, clock, R14in, BusMuxOut, BusMuxInR14);
 register R15(clear, clock, R15in, BusMuxOut, BusMuxInR15);
 
-defparam R1.INIT = 32'd3;
-defparam R2.INIT = 32'd93;
-defparam R3.INIT = 32'd9;
-defparam R4.INIT = 32'h69;
-defparam R6.INIT = 32'd0;
-
 //registers
 register HI(clear, clock, HIin, BusMuxOut, BusMuxInHI);
 register LO(clear, clock, LOin, BusMuxOut, BusMuxInLO);
@@ -79,7 +73,6 @@ SE SelectAndEncode(Gra, Grb, Grc, Rin, Rout, BAout, IRout,
 Bus bus(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7,
 	BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15,
 	BusMuxInHI, BusMuxInLO, BusMuxInZHI, BusMuxInZLO, BusMuxInZMux, BusMuxInPC, BusMuxInMDR, BusMuxInPortIn, BusMuxInCSign,
-	HIout, LOout,
 	R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, 
 	R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,
 	HIout, LOout, ZHIout, ZLOout, ZMuxOut, PCout, MDRout, PortInout, CSignout,
@@ -89,5 +82,5 @@ Bus bus(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, 
 ControlUnit CPU(PCout, PCin, IncPC, IRin,Zin, ZLOout, ZHIout, CSignout, aluControl,
 					 RAMenable, MDRout, MARin, MDRin, Gra, Grb, Grc, Rin, Rout, BAout,
 					 read, write, clear, conin, ZMuxEnable, ZSelect, ZMuxOut,
-					 OutPortenable, PortInout, R15inC, Yin, IRout, HIout, HIin, LOout, LOin, conOut, clock, reset);
+					 OutPortenable, PortInout, R15inC, Yin, HIout, HIin, LOout, LOin, IRout, conOut, clock, reset);
 endmodule

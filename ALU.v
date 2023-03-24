@@ -53,7 +53,7 @@ always @ (*) begin
 		end
 		
 		5'b01000 : begin //shra
-			C = A >>> B;
+			C = $signed(A) >>> B;
 		end
 		
 		5'b01001 : begin //shl

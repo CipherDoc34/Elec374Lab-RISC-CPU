@@ -33,7 +33,7 @@ mflo3 = 6'd40,
 halt3 = 6'd41,
 nop3 = 6'd42;
 
-parameter ALUadd = 5'b00011;
+parameter ALUadd = 5'b00011, ALUand = 5'b00101, ALUor = 5'b00110;
 
 parameter ld = 5'b00000, ldi = 5'b00001, st = 5'b00010, 
 add = 5'b00011, sub = 5'b00100, ANDop = 5'b00101, ORop = 5'b00110,
@@ -133,36 +133,36 @@ always @(present_state) begin
 			end
 			ldi4: begin
 				Grb <= 0; BAout <= 0; Yin <= 0;
-				Cout <= 1; aluControl <= ALUadd; Zin <= 1; 
+				CSignout <= 1; aluControl <= ALUadd; Zin <= 1; 
 				next_state <= ldi5;
 			end
 			ldi5: begin
-				Cout <= 0; Zin <= 0; 
+				CSignout <= 0; Zin <= 0; 
 				ZLOout <= 1; Gra <= 1; Rin <= 1;
-				#15 ZLOout <= 0; Rin <= 0;
+				#15 ZLOout <= 0; Rin <= 0; Gra <= 0;
 				next_state <= T0;
 			end
 			
 //st
 			st3: begin
 				MDRout <= 0; IRin <= 0;
-				Grb <= 1; Rout <= 1; Yin <= 1;
+				Grb <= 1; BAout <= 1; Yin <= 1;
 				next_state <= st4;
 			end
 			st4: begin
-				Grb <= 0; Rout <= 0; Yin <= 0;
-				Cout <= 1; aluControl <= ALUadd; Zin <= 1;
+				Grb <= 0; BAout <= 0; Yin <= 0;
+				CSignout <= 1; aluControl <= ALUadd; Zin <= 1;
 				next_state <= st5;
 			end
 			st5: begin
-				Cout <= 0; Zin <= 0;
+				CSignout <= 0; Zin <= 0;
 				ZLOout <= 1; MARin <= 1;
 				next_state <= st6;
 			end
 			st6: begin
 				ZLOout <= 0; MARin <= 0;
 				Gra <= 1; Rout <= 1; MDRin <= 1;
-				next_state <= st8;
+				next_state <= st7;
 			end
 			st7: begin
 				Gra <= 0; Rout <= 0; MDRin <= 0;
@@ -215,7 +215,7 @@ always @(present_state) begin
 			end
 			muldiv4: begin
 				Gra <= 0; Rout <= 0; Yin <= 0;
-				Grb <= 1; Rout <= 1 aluControl <= IR[31:27]; Zin <= 1;
+				Grb <= 1; Rout <= 1; aluControl <= IR[31:27]; Zin <= 1;
 				next_state <= muldiv5;
 			end
 			muldiv5: begin
@@ -238,13 +238,19 @@ always @(present_state) begin
 			end
 			ALUi4: begin
 				Grb <= 0; Rout <= 0; Yin <= 0;
-				Cout <= 1; aluControl <= IR[31:27]; Zin <= 1; 
+				CSignout <= 1;
+				case(IR[31:27])
+					addi: aluControl <= ALUadd;
+					andi: aluControl <= ALUand;
+					ori: aluControl <= ALUor;
+				endcase
+				Zin <= 1; 
 				next_state <= ALUi5;
 			end
 			ALUi5: begin
-				Cout <= 0; Zin <= 0;
+				CSignout <= 0; Zin <= 0;
 				ZLOout <= 1; Gra <= 1; Rin <= 1;
-				#15 ZLOout <= 1; Gra <= 0; Rin <= 0;
+				#15 ZLOout <= 0; Gra <= 0; Rin <= 0;
 				next_state <= T0;
 			end
 			
@@ -261,11 +267,11 @@ always @(present_state) begin
 			end
 			br5: begin
 				PCout <= 0; Yin <= 0;
-				Cout <= 1; aluControl <= ALUadd; Zin <= 1;
-				next_state <= br5;
+				CSignout <= 1; aluControl <= ALUadd; Zin <= 1;
+				next_state <= br6;
 			end
 			br6: begin
-				Cout <= 0; Zin <= 0;
+				CSignout <= 0; Zin <= 0;
 				ZLOout <= 1; PCin <= conOut;
 				#15 ZLOout <= 0; PCin <= 0;
 				next_state <= T0;
@@ -327,6 +333,7 @@ always @(present_state) begin
 //halt 
 			halt3: begin
 				MDRout <= 0; IRin <= 0;
+				next_state <= halt3;
 			end
 		
 //nop 
