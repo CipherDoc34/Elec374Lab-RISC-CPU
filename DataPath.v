@@ -79,7 +79,7 @@ Bus bus(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, 
 	S0, S1, S2, S3, S4, BusMuxOut);
 
 //Control Unit
-ControlUnit CPU(PCout, PCin, IncPC, IRin,Zin, ZLOout, ZHIout, CSignout, aluControl,
+ControlUnit CU(PCout, PCin, IncPC, IRin,Zin, ZLOout, ZHIout, CSignout, aluControl,
 					 RAMenable, MDRout, MARin, MDRin, Gra, Grb, Grc, Rin, Rout, BAout,
 					 read, write, clear, conin, ZMuxEnable, ZSelect, ZMuxOut,
 					 OutPortenable, PortInout, R15inC, Yin, HIout, HIin, LOout, LOin, IRout, conOut, clock, reset);

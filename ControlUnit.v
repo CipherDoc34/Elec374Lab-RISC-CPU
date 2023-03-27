@@ -10,7 +10,7 @@ module ControlUnit(
 					OutPortenable, PortInout, R15inC, Yin,
 					HIout, HIin, LOout, LOin,
 	input wire [31:0]IR,
-	input wire conOut, clk, reset
+	input wire conOut, clk, reset_n
 );
 reg [5:0]present_state, next_state;
 initial begin present_state <= 0; next_state <= 0; end
@@ -44,8 +44,8 @@ br = 5'b10011, jr = 5'b10100, jal = 5'b10101,
 in = 5'b10110, out = 5'b10111, mfhi = 5'b11000, mflo = 5'b11001,
 nop = 5'b11010, halt = 5'b11011;
 
-always @(negedge clk, negedge reset) begin
-	if(reset == 0) present_state <= Reset_state;
+always @(negedge clk, negedge reset_n) begin
+	if(reset_n == 0) present_state <= Reset_state;
 	else if (present_state == Reset_state || present_state == T0 || present_state == T1 || present_state == T2) begin
 		case (present_state)
 			Reset_state: present_state <= T0;
@@ -78,15 +78,18 @@ end
 always @(present_state) begin
 	case (present_state)
 		Reset_state: begin
-			PCout <= 0; IncPC<= 0; Zin <= 0; ZLOout <= 0; MDRout <= 0; RAMenable <= 0;
-			MARin<= 0; PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0;
+			PCout <= 0; PCin <= 0; IncPC<= 0; IRin <= 0; 
+			Zin <= 0; ZLOout <= 0; ZHIout <= 0; CSignout <= 0;
+			aluControl <= 5'd0;
+			RAMenable <= 0; MDRout <= 0; MARin<= 0; MDRin <= 0; 
 			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
-			read <= 0; write <= 0; clear <= 0; conin <= 0;
-			ZMuxEnable <= 0; ZSelect <= 0; ZMuxOut <= 0;  CSignout <= 0;
-			OutPortenable <= 0; PortInout <= 0; R15inC <= 0;ZHIout <= 0; aluControl <= 5'd0;
+			read <= 0; write <= 0; clear <= 1; conin <= 0;
+			ZMuxEnable <= 0; ZSelect <= 0; ZMuxOut <= 0;  
+			OutPortenable <= 0; PortInout <= 0; R15inC <= 0; Yin <= 0;
+			HIout <= 0; HIin <= 0; LOout <= 0; LOin <= 0;
 		end
 		T0: begin
-			PCout <= 1; MARin <= 1; IncPC <= 1;
+			PCout <= 1; MARin <= 1; IncPC <= 1; clear <= 0;
 		end
 		T1: begin
 			PCout <= 0; MARin <= 0; IncPC <= 0;
