@@ -1,3 +1,4 @@
-Info (10281): Verilog HDL Declaration information at DataPath.v(11): object "Inport" differs only in case from object "InPort" in the same scope
+Info (10281): Verilog HDL Declaration information at DataPath.v(3): object "Inport" differs only in case from object "InPort" in the same scope
 Warning (10268): Verilog HDL information at datapath_tb.v(221): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at conff.v(12): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at clockgen.v(8): always construct contains both blocking and non-blocking assignments

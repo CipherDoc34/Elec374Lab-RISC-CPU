@@ -7,7 +7,7 @@ reg [DATA_WIDTH-1:0]q;
 reg [DATA_WIDTH-1:0] memory [(2**ADDR_SPACE)-1:0];
 integer i;
 
-initial $readmemh("RAM.txt", memory);
+initial $readmemh("Phase4.txt", memory);
 
 always @ (posedge enable) begin
 	if(enable == 1) begin

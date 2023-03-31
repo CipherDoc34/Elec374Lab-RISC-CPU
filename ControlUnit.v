@@ -13,6 +13,7 @@ module ControlUnit(
 	input wire conOut, clk, reset_n
 );
 reg [5:0]present_state, next_state;
+
 initial begin present_state <= 0; next_state <= 0; end
 parameter 
 Reset_state = 6'd0, T0 = 6'd1, T1 = 6'd2, T2 = 6'd3, 

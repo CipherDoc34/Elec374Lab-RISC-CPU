@@ -1,5 +1,8 @@
 module DataPath(
-	input	clock, reset
+	input wire clk, reset,
+	input wire [31:0]Inport,
+	output wire [31:0]OutportData,
+	output wire [7:0] led
 );
 
 wire [31:0] BusMuxOut; 
@@ -8,19 +11,27 @@ wire [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxIn
 wire [31:0] BusMuxInZHI, BusMuxInZLO;
 wire [31:0] BusMuxInPC, IRout;
 wire [31:0] BusMuxInMDR, RAMDataout;
-wire [31:0] BusMuxInPortIn, Inport;
+wire [31:0] BusMuxInPortIn;
 wire [31:0] BusMuxInCSign;
 wire [31:0] BusMuxInY;
 wire [31:0] BusMuxInHI, BusMuxInLO;
 wire [63:0] ZMuxIn, BusMuxInZMux;
 wire [8:0] MARaddrOut;
 wire [4:0] aluControl;
-wire [31:0] OutportData;
+wire clock;
+wire [31:0] SevenOut;
 wire R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out, HIout, LOout,
      R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in, R15inS;
 wire PCout, PCin, IncPC, IRin,Zin, ZLOout, ZHIout, CSignout, RAMenable, MDRout, MARin, MDRin, Gra, Grb, Grc, Rin, Rout, BAout,
 	  read, write, clear, conin, ZMuxEnable, ZSelect, ZMuxOut, OutPortenable, PortInout, R15inC, Yin, conOut;
+assign led[0] = clear;
+assign led[1] = reset;
+assign led[2] = clk;
+assign led[3] = clock;
 assign R15in = R15inS | R15inC;
+assign clock = clk;
+
+//clockgen clockSig(clock, clk);
 
 //General Purpose Registers
 reg0 R0(clear, clock, R0in, BAout, BusMuxOut, BusMuxInR0);
@@ -55,7 +66,8 @@ register #(.DATA_WIDTH_IN(32), .DATA_WIDTH_OUT(9))
 		MAR(.clear(clear), .clock(clock), .enable(MARin), .BusMuxOut(BusMuxOut), .BusMuxIn(MARaddrOut));
 RAM RAM(BusMuxInMDR, MARaddrOut, read, write, RAMenable, RAMDataout);
 InPort InPort(clear, clock, Inport, BusMuxInPortIn);
-OutPort OutPort(clear, clock, OutPortenable, BusMuxOut, OutportData);
+OutPort OutPort(clear, clock, OutPortenable, SevenOut, OutportData);
+Seven_Seg_Display_Out Disp(SevenOut, clock, BusMuxOut);
 
 //register CSign(clear, clock, CSignIn, BusMuxOut, BusMuxInCSign);
 ALU alu(BusMuxInY, BusMuxOut, aluControl, ZMuxIn);
